@@ -1,0 +1,90 @@
+
+body, h1, h2, h3, h4, h5, h6, .label, button, .button, .top-bar-section ul li > a {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+body {
+	color: #7a7a7a;
+}
+
+.top-bar-section li {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: 500; 
+}
+
+.top-bar {
+	margin-top: 3em;
+	margin-bottom: 2em;
+	height: 3.3em;
+	border-bottom: #7a7a7a 1px solid;
+}
+
+dt {
+	color: #575757;
+}
+
+.top-bar {
+	margin-bottom: 4em;
+}
+
+
+.about-left {
+	padding-right: 2em;
+}
+
+.about-right {
+	padding-left: 2em;
+}
+
+span.school-name {
+	font-weight: bold;
+}
+
+
+
+.welcome {
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+}
+
+.welcome p {
+	font-size: 2rem;
+	line-height: 1.2;
+	color: #969696;
+	font-weight: 300;
+	text-align: justify;
+}
+
+.inner {
+	max-width: 62.5em;
+	margin: 0 auto;
+}
+
+
+footer {
+	display: block;
+	border-top: solid 1px #ccc;
+}
+
+.footer-contact {
+	display: block;
+	float: right;
+
+}
+
+.gray {
+	color: #ccc;
+}
+
+ul.small {
+	font-size: 0.8rem;
+	line-height:1.2rem;
+}
+
+.footer-bottom {
+	padding: 0;
+	color: #ccc;
+	
+}
+

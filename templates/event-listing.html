@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Forces at SLAM{% endblock %}
+{% block content %}
+
+<div class="large-12">
+	
+	<div class="row">
+	<div class="large-8 columns">
+	<a class="events-back" href="{% url 'events' %}">Back to all events</a>	
+	
+	<section class="event-title">
+		<h1>{{ event.name }}</h1>
+	</section>
+
+	<img src="{{ event.image.url }}" height="" width="660px"></a>
+
+	<section class="event-details">
+		<div class="event-text">
+		<p>
+		<strong>Venue:</strong> <a href="{{ event.venue_url }}" target="_blank">{{ event.venue }}</a><br>
+		<strong>Date:</strong> {{ event.start_date }} 
+		{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %}<br>
+		<strong>Time:</strong> {{ event.time }}<br>
+		<strong>Price:</strong> {{ event.price }}<br>
+		<a href="{{ event.link }}" target="_blank">Event website</a>
+		</p>
+
+		<p>{{ event.description|linebreaks|safe }}</p>
+
+		</div>
+
+	
+	</section>
+	<br><a class="events-back" href="{% url 'events' %}">Back to all events</a><br><br><br><br>
+
+
+	</div>
+	</div>
+	</div>
+	</div>
+
+	
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

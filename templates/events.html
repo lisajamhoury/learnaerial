@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Aerial Events New York City{% endblock %}
+{% block content %}
+
+<div class="large-12">
+	<h1>Aerial Events New York City</h1>
+
+
+	<div class="row">
+	<div class="large-8 columns">
+	<p>Events in New York City are listed by date. Subscribe to receive our weekly listings email. If you'd like to submit your event, <a href="mailto:learnaerial@gmail.com">contact us</a>.</p><br>
+		
+
+	<section class="event-listings-all">
+	<hr>
+
+	{% for event in events %}
+	<div class="event-summary">
+		
+		<div class="event-thumbnail">
+		<a href="{% url 'event-listing' event.slug %}"><img src="{{ event.image.url }}" height="100" width="100px"></a>
+		</div>
+
+		<div class="summary-details">
+		<span class="summary-event-name"><a class="summary-title" href="{% url 'event-listing' event.slug %}">{{ event.name }}</a></span><br><br>
+		<span class="summary-event-venue">{{ event.venue }}</span>
+		<span class="summary-event-date"> | {{ event.start_date}} 
+		{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %} | <a href="{% url 'event-listing' event.slug %}">Event details</a><br>
+		</div>
+		
+		<div class="clearfix">	
+		</div>
+
+	</div>
+	{% endfor %}
+
+
+	</section>
+	</div>
+	</div>
+
+
+
+
+
+
+</div>
+
+{% endblock %}
