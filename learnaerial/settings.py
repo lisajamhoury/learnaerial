@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+try:
+    from learnaerial.environment import ENVIRONMENT
+except ImportError:
+    ENVIRONMENT='production'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -20,11 +24,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '=sf$s-&@ayl2(3&rfro=ywy#0w3jvvi$e%!oh+=2@0n5x)qug='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+if ENVIRONMENT == 'develop':
+    DEBUG = True
 
-ALLOWED_HOSTS = []
+TEMPLATE_DEBUG = DEBUG
+
+ALLOWED_HOSTS = ['learnaerial.com']
 
 
 # Application definition
@@ -58,14 +65,23 @@ WSGI_APPLICATION = 'learnaerial.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
-
-DATABASES = {    
+DATABASES = {
     'default':{
        'NAME':'learnaerial',
+       'USER': 'learnaerial',
+       'PASSWORD': 'fop32fjpo2!!@222',
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-   }
+    }
 }
+
+
+if ENVIRONMENT == 'develop':
+    DATABASES = {
+        'default':{
+           'NAME':'learnaerial',
+           'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       }
+    }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -97,3 +113,4 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_ROOT = BASE_DIR + '/media'
+STATIC_ROOT = BASE_DIR + '/static'
