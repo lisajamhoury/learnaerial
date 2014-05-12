@@ -31,7 +31,7 @@ if ENVIRONMENT == 'develop':
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['learnaerial.com']
 
 
 # Application definition
