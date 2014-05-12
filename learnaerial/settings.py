@@ -17,6 +17,11 @@ try:
 except ImportError:
     ENVIRONMENT='production'
 
+try:
+    from learnaerial.db_settings import DB_PASSWORD
+except ImportError:
+    DB_PASSWORD = ''
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -69,7 +74,7 @@ DATABASES = {
     'default':{
        'NAME':'learnaerial',
        'USER': 'learnaerial',
-       'PASSWORD': os.environ.get('DB_PASSWORD',''),
+       'PASSWORD': DB_PASSWORD,
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
     }
 }
