@@ -69,7 +69,7 @@ DATABASES = {
     'default':{
        'NAME':'learnaerial',
        'USER': 'learnaerial',
-       'PASSWORD': 'fop32fjpo2!!@222',
+       'PASSWORD': os.environ.get('DB_PASSWORD',''),
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
     }
 }
