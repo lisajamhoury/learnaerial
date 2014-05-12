@@ -68,7 +68,7 @@ WSGI_APPLICATION = 'learnaerial.wsgi.application'
 DATABASES = {
     'default':{
        'NAME':'learnaerial',
-       'USER': 'lisajamhoury',
+       'USER': 'learnaerial',
        'PASSWORD': 'fop32fjpo2!!@222',
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
     }
