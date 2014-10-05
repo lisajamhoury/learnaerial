@@ -9,7 +9,7 @@
 
 	<div class="row">
 	<div class="large-8 columns">
-	<p>Coming soon!<!-- Events in New York City are listed by date. Subscribe to receive our weekly listings email. If you'd like to submit your event, <a href="mailto:learnaerial@gmail.com">contact us</a>. --></p><br>
+	<p>Events in New York City are listed by date.<!--  Subscribe to receive our weekly listings email. --> If you'd like to list your event, <a href="mailto:learnaerial@gmail.com">email us</a>. </p><br>
 		
 
 	<section class="event-listings-all">
@@ -19,7 +19,9 @@
 	<div class="event-summary">
 		
 		<div class="event-thumbnail">
-		<a href="{% url 'event-listing' event.slug %}"><img src="{{ event.image.url }}" height="100" width="100px"></a>
+			<a href="{% url 'event-listing' event.slug %}">
+				<div class="event-thumbnail-image" style="background-image: url('{{ event.image.url }}')"></div>
+			</a>
 		</div>
 
 		<div class="summary-details">

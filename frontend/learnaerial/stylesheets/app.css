@@ -9571,48 +9571,48 @@ span.school-name {
   color: #333;
 }
 
-/* line 88, ../scss/app.scss */
+/* line 87, ../scss/app.scss */
 .welcome {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
-/* line 94, ../scss/app.scss */
+/* line 93, ../scss/app.scss */
 .inner {
   max-width: 62.5em;
   margin: 0 auto;
 }
 
-/* line 100, ../scss/app.scss */
+/* line 99, ../scss/app.scss */
 footer {
   display: block;
   border-top: solid 1px #ccc;
 }
 
-/* line 105, ../scss/app.scss */
+/* line 104, ../scss/app.scss */
 .footer-contact {
   display: block;
   float: right;
 }
 
-/* line 111, ../scss/app.scss */
+/* line 110, ../scss/app.scss */
 .gray {
   color: #ccc;
 }
 
-/* line 115, ../scss/app.scss */
+/* line 114, ../scss/app.scss */
 ul.small {
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
 
-/* line 120, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .footer-bottom {
   padding: 0;
   color: #ccc;
 }
 
-/* line 126, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 #home-splash {
   padding-top: 130px;
   min-height: 475px;
@@ -9620,7 +9620,7 @@ ul.small {
   background-size: cover;
   margin-top: 20px;
 }
-/* line 132, ../scss/app.scss */
+/* line 131, ../scss/app.scss */
 #home-splash p {
   color: #fff;
   font-weight: 100;
@@ -9629,30 +9629,30 @@ ul.small {
   font-size: 1.3rem;
   line-height: 1.5;
 }
-/* line 141, ../scss/app.scss */
+/* line 140, ../scss/app.scss */
 #home-splash a {
   color: #fff;
   text-decoration: underline;
 }
 
-/* line 147, ../scss/app.scss */
+/* line 146, ../scss/app.scss */
 .three-column h2 {
   font-size: 1.4rem;
   font-weight: 200;
   text-transform: capitalize;
 }
 
-/* line 154, ../scss/app.scss */
+/* line 153, ../scss/app.scss */
 .top-bar-section ul li > a {
   text-decoration: none;
 }
 
-/* line 158, ../scss/app.scss */
+/* line 157, ../scss/app.scss */
 .event-title h1 {
   font-size: 2rem;
 }
 
-/* line 162, ../scss/app.scss */
+/* line 161, ../scss/app.scss */
 .event-details {
   display: block;
   background: #f7f7f7;
@@ -9660,17 +9660,17 @@ ul.small {
   margin-bottom: 30px;
 }
 
-/* line 169, ../scss/app.scss */
+/* line 168, ../scss/app.scss */
 a.events-back {
   font-size: small;
 }
 
-/* line 173, ../scss/app.scss */
+/* line 172, ../scss/app.scss */
 .event-text strong {
   color: #575757;
 }
 
-/* line 178, ../scss/app.scss */
+/* line 177, ../scss/app.scss */
 .event-summary {
   display: block;
   height: 90px;
@@ -9678,14 +9678,24 @@ a.events-back {
   margin-bottom: 15px;
 }
 
-/* line 185, ../scss/app.scss */
+/* line 184, ../scss/app.scss */
 .event-thumbnail {
   display: block;
   float: left;
   margin-right: 10px;
 }
 
-/* line 191, ../scss/app.scss */
+/* line 190, ../scss/app.scss */
+.event-thumbnail-image {
+  display: block;
+  height: 70px;
+  width: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 199, ../scss/app.scss */
 .summary-details {
   display: block;
   float: left;
@@ -9693,29 +9703,29 @@ a.events-back {
   padding: 0 10px;
 }
 
-/* line 199, ../scss/app.scss */
+/* line 207, ../scss/app.scss */
 span.summary-event-name {
   text-transform: uppercase;
   font-size: 1.5rem;
 }
 
-/* line 204, ../scss/app.scss */
+/* line 212, ../scss/app.scss */
 a.summary-title {
   color: #7a7a7a;
   text-decoration: none;
 }
 
-/* line 209, ../scss/app.scss */
+/* line 217, ../scss/app.scss */
 .event-listings-all {
   margin-bottom: 100px;
 }
 
-/* line 214, ../scss/app.scss */
+/* line 222, ../scss/app.scss */
 span.summary-event-date {
   font-size: small;
 }
 
-/* line 219, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 span.summary-event-venue {
   font-size: small;
   text-transform: uppercase;

@@ -84,7 +84,6 @@ span.school-name {
 }
 
 
-
 .welcome {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
@@ -186,6 +185,15 @@ a.events-back {
 	display: block;
 	float: left;
 	margin-right: 10px;
+}
+
+.event-thumbnail-image {
+	display: block;
+	height: 70px;
+	width: 70px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .summary-details {
