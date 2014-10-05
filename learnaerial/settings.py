@@ -10,7 +10,10 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_WEBFACTION_DIR = os.path.dirname(os.path.dirname(BASE_DIR))
+
 
 try:
     from learnaerial.environment import ENVIRONMENT
@@ -117,5 +120,5 @@ STATICFILES_DIRS = (
     BASE_DIR + '/assets',
 )
 
-MEDIA_ROOT = BASE_DIR + '/media'
-STATIC_ROOT = BASE_DIR + '/static'
+MEDIA_ROOT = BASE_WEBFACTION_DIR + '/learnaerial_media'
+STATIC_ROOT = BASE_WEBFACTION_DIR + '/learnaerial_static'
