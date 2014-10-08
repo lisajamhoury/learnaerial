@@ -154,8 +154,14 @@ ul.small {
 	text-decoration: none;
 }
 
-.event-title h1 {
-	font-size: 2rem;
+.event-title {
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+
+	h1 {
+		font-size: 2rem;
+		line-height: 1.75;
+	}
 }
 
 .event-details {
@@ -207,6 +213,9 @@ a.events-back {
 span.summary-event-name {
 	text-transform: uppercase;
 	font-size: 1.5rem;
+	display: block;
+	width: 545px;
+	margin-bottom: 0.6rem;
 }
 
 a.summary-title {

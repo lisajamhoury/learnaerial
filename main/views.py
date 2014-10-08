@@ -2,20 +2,44 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-	return render(request, 'home.html')
+
+	context = {}
+	context['current_page'] = 'home'
+
+	return render(request, 'home.html', context)
 
 def about(request):
-	return render(request, 'about.html')
+
+	context = {}
+	context['current_page'] = 'about'
+
+	return render(request, 'about.html', context)
 
 def schools(request):
-	return render(request, 'schools.html')
+
+	context = {}
+	context['current_page'] = 'schools'
+
+	return render(request, 'schools.html', context)
 
 def venues(request):
-	return render(request, 'venues.html')
+
+	context = {}
+	context['current_page'] = 'venues'
+
+	return render(request, 'venues.html', context)
 
 def companies(request):
-	return render(request, 'companies.html')
+
+	context = {}
+	context['current_page'] = 'companies'
+
+	return render(request, 'companies.html', context)
 
 def equipment(request):
-	return render(request, 'equipment.html')
+
+	context = {}
+	context['current_page'] = 'equipment'
+
+	return render(request, 'equipment.html', context)
 

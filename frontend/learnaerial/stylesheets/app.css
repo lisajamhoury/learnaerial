@@ -9648,11 +9648,17 @@ ul.small {
 }
 
 /* line 157, ../scss/app.scss */
+.event-title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+/* line 161, ../scss/app.scss */
 .event-title h1 {
   font-size: 2rem;
+  line-height: 1.75;
 }
 
-/* line 161, ../scss/app.scss */
+/* line 167, ../scss/app.scss */
 .event-details {
   display: block;
   background: #f7f7f7;
@@ -9660,17 +9666,17 @@ ul.small {
   margin-bottom: 30px;
 }
 
-/* line 168, ../scss/app.scss */
+/* line 174, ../scss/app.scss */
 a.events-back {
   font-size: small;
 }
 
-/* line 172, ../scss/app.scss */
+/* line 178, ../scss/app.scss */
 .event-text strong {
   color: #575757;
 }
 
-/* line 177, ../scss/app.scss */
+/* line 183, ../scss/app.scss */
 .event-summary {
   display: block;
   height: 90px;
@@ -9678,14 +9684,14 @@ a.events-back {
   margin-bottom: 15px;
 }
 
-/* line 184, ../scss/app.scss */
+/* line 190, ../scss/app.scss */
 .event-thumbnail {
   display: block;
   float: left;
   margin-right: 10px;
 }
 
-/* line 190, ../scss/app.scss */
+/* line 196, ../scss/app.scss */
 .event-thumbnail-image {
   display: block;
   height: 70px;
@@ -9695,7 +9701,7 @@ a.events-back {
   background-position: center;
 }
 
-/* line 199, ../scss/app.scss */
+/* line 205, ../scss/app.scss */
 .summary-details {
   display: block;
   float: left;
@@ -9703,29 +9709,32 @@ a.events-back {
   padding: 0 10px;
 }
 
-/* line 207, ../scss/app.scss */
+/* line 213, ../scss/app.scss */
 span.summary-event-name {
   text-transform: uppercase;
   font-size: 1.5rem;
+  display: block;
+  width: 545px;
+  margin-bottom: 0.6rem;
 }
 
-/* line 212, ../scss/app.scss */
+/* line 221, ../scss/app.scss */
 a.summary-title {
   color: #7a7a7a;
   text-decoration: none;
 }
 
-/* line 217, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 .event-listings-all {
   margin-bottom: 100px;
 }
 
-/* line 222, ../scss/app.scss */
+/* line 231, ../scss/app.scss */
 span.summary-event-date {
   font-size: small;
 }
 
-/* line 227, ../scss/app.scss */
+/* line 236, ../scss/app.scss */
 span.summary-event-venue {
   font-size: small;
   text-transform: uppercase;

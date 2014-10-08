@@ -6,6 +6,7 @@ def events(request):
 
 	context = {}
 	context['events'] = events
+	context['current_page'] = 'events'
 
 	return render(request, 'events.html', context)
 
@@ -14,5 +15,6 @@ def event_listing(request, slug):
 
 	context = {}
 	context['event'] = event 
+	context['current_page'] = 'event_listing'
 
 	return render(request, 'event-listing.html', context)

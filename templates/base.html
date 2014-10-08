@@ -24,12 +24,12 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><a href="{% url 'about' %}">About</a></li>
-      <li><a href="{% url 'schools' %}">Schools</a></li>
-      <li><a href="{% url 'venues' %}">Venues</a></li>
-      <li><a href="{% url 'companies' %}">Companies</a></li>
-      <li><a href="{% url 'events' %}">Events</a></li>
-      <li><a href="{% url 'equipment' %}">Equipment</a></li>
+      <li {% if current_page == 'about' %} class="active" {% endif %}><a href="{% url 'about' %}">About</a></li>
+      <li {% if current_page == 'schools' %} class="active" {% endif %}><a href="{% url 'schools' %}">Schools</a></li>
+      <li {% if current_page == 'venues' %} class="active" {% endif %}><a href="{% url 'venues' %}">Venues</a></li>
+      <li {% if current_page == 'companies' %} class="active" {% endif %}><a href="{% url 'companies' %}">Companies</a></li>
+      <li {% if current_page == 'event_listing' or current_page == 'events' %} class="active" {% endif %}><a href="{% url 'events' %}">Events</a></li>
+      <li {% if current_page == 'equipment' %} class="active" {% endif %}><a href="{% url 'equipment' %}">Equipment</a></li>
     </ul>
   </section>
   </div>

@@ -1,6 +1,8 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+learnaerial/environment.py
+frontend/learnaerial/.sass-cache/*
 
 # C extensions
 *.so

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title %}Forces at SLAM{% endblock %}
+{% block title %}{{ event.name }}{% endblock %}
 {% block content %}
 
 <div class="large-12">
@@ -23,7 +23,7 @@
 		{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %}<br>
 		<strong>Time:</strong> {{ event.time }}<br>
 		<strong>Price:</strong> {{ event.price }}<br>
-		<a href="{{ event.link }}" target="_blank">Event website</a>
+		<strong>Website:</strong> <a href="{{ event.link }}" target="_blank">{{ event.link|truncatechars:"45" }}</a>
 		</p>
 
 		<p>{{ event.description|linebreaks|safe }}</p>
