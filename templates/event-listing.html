@@ -18,12 +18,12 @@
 	<section class="event-details">
 		<div class="event-text">
 		<p>
-		<strong>Venue:</strong> <a href="{{ event.venue_url }}" target="_blank">{{ event.venue }}</a><br>
-		<strong>Date:</strong> {{ event.start_date }} 
-		{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %}<br>
-		<strong>Time:</strong> {{ event.time }}<br>
-		<strong>Price:</strong> {{ event.price }}<br>
-		<strong>Website:</strong> <a href="{{ event.link }}" target="_blank">{{ event.link|truncatechars:"45" }}</a>
+		{% if event.venue %}<strong>Venue:</strong> <a href="{{ event.venue_url }}" target="_blank">{{ event.venue }}</a><br>{% endif %}
+		{% if event.start_date %}<strong>Date:</strong> {{ event.start_date }} 
+		{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %}<br>{% endif %}
+		{% if event.time %}<strong>Time:</strong> {{ event.time }}<br>{% endif %}
+		{% if event.price %}<strong>Price:</strong> {{ event.price }}<br>{% endif %}
+		{% if event.link %}<strong>Website:</strong> <a href="{{ event.link }}" target="_blank">{{ event.link|truncatechars:"45" }}</a>{% endif %}
 		</p>
 
 		<p>{{ event.description|linebreaks|safe }}</p>

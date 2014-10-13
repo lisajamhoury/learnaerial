@@ -1,8 +1,12 @@
+import datetime
+
 from django.shortcuts import render
 from events.models import Event 
 
+
 def events(request):
-	events = Event.objects.filter(published=True).order_by('-start_date')
+	now = datetime.datetime.now()
+	events = Event.objects.filter(published=True).exclude(end_date__lte=now, start_date__lte=now).order_by('start_date')
 
 	context = {}
 	context['events'] = events
