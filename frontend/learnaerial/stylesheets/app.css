@@ -9718,27 +9718,26 @@ span.summary-event-name {
   text-transform: uppercase;
   font-size: 1.5rem;
   display: block;
-  width: 545px;
   margin-bottom: 0.6rem;
 }
 
-/* line 225, ../scss/app.scss */
+/* line 224, ../scss/app.scss */
 a.summary-title {
   color: #7a7a7a;
   text-decoration: none;
 }
 
-/* line 230, ../scss/app.scss */
+/* line 229, ../scss/app.scss */
 .event-listings-all {
   margin-bottom: 100px;
 }
 
-/* line 235, ../scss/app.scss */
+/* line 234, ../scss/app.scss */
 span.summary-event-date {
   font-size: small;
 }
 
-/* line 240, ../scss/app.scss */
+/* line 239, ../scss/app.scss */
 span.summary-event-venue {
   font-size: small;
   text-transform: uppercase;
