@@ -8,13 +8,13 @@
     <title>{% block title %}{% endblock %} | learnaerial.com</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" />
     <link rel="stylesheet" href="{% static "css/app.css" %}" />
-    <script src="{% static 'bower_components/modernizr/modernizr.js' %}" o></script>
+    <script src="{% static 'js/modernizr/modernizr.js' %}" o></script>
   </head>
 
 <body>
 <div class="row">
-<nav class="top-bar">
-<div class="inner">
+<nav class="top-bar large-12 columns">
+<div class="inner clearfix">
   <ul class="title-area">
     <li class="name">
      <a href="{% url 'home' %}"><img src="{% static "img/learn-aerial-logo-440.gif" %}" alt="Learn Aerial Logo" height="36px" width="220px"></a>
@@ -37,8 +37,10 @@
 </div>
 
 <div class="row">
+<div class="large-12 columns">
 {% block content %}
 {% endblock %}
+</div>
 </div>
 
 <footer class="inner">
@@ -58,8 +60,8 @@
 </footer>  
 
 
-<script src="{% static 'bower_components/jquery/src/jquery.js' %}" ></script>
-<script src="{% static 'bower_components/foundation/js/foundation.min.js' %}" ></script>
+<script src="{% static 'js/jquery/dist/jquery.js' %}" ></script>
+<script src="{% static 'js/foundation/js/foundation.min.js' %}" ></script>
 <script>
   $(document).foundation();
 </script>

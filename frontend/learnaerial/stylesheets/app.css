@@ -8204,7 +8204,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
-  line-height: 3;
+  line-height: 1.4;
 }
 /* line 327, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
@@ -8452,7 +8452,7 @@ blockquote p {
 @media only screen and (min-width: 0em) {
   /* line 513, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h1, h2, h3, h4, h5, h6 {
-    line-height: 3;
+    line-height: 1.4;
   }
 
   /* line 514, ../bower_components/foundation/scss/foundation/components/_type.scss */
@@ -9535,92 +9535,96 @@ h1, h2 {
   font-weight: 200;
 }
 
-/* line 56, ../scss/app.scss */
+/* line 55, ../scss/app.scss */
+h1 {
+  display: block;
+  margin-bottom: 1em;
+}
+
+/* line 61, ../scss/app.scss */
 .top-bar-section li {
   font-size: 1.3em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-/* line 62, ../scss/app.scss */
+/* line 67, ../scss/app.scss */
 .top-bar {
   margin-top: 3em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   height: 3.3em;
+}
+/* line 71, ../scss/app.scss */
+.top-bar .inner {
   border-bottom: #7a7a7a 1px solid;
+  padding-bottom: 0.5em;
 }
 
-/* line 69, ../scss/app.scss */
+/* line 77, ../scss/app.scss */
 dt {
   color: #575757;
 }
 
-/* line 73, ../scss/app.scss */
+/* line 81, ../scss/app.scss */
 .about-left {
   padding-right: 2em;
 }
 
-/* line 77, ../scss/app.scss */
-.about-right {
-  padding-left: 2em;
-}
-
-/* line 81, ../scss/app.scss */
+/* line 86, ../scss/app.scss */
 span.school-name {
   font-weight: 700;
   color: #333;
 }
 
-/* line 87, ../scss/app.scss */
+/* line 92, ../scss/app.scss */
 .welcome {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
-/* line 93, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 .inner {
   max-width: 62.5em;
   margin: 0 auto;
 }
 
-/* line 99, ../scss/app.scss */
+/* line 104, ../scss/app.scss */
 footer {
   display: block;
   border-top: solid 1px #ccc;
 }
 
-/* line 104, ../scss/app.scss */
+/* line 109, ../scss/app.scss */
 .footer-contact {
   display: block;
   float: right;
 }
 
-/* line 110, ../scss/app.scss */
+/* line 115, ../scss/app.scss */
 .gray {
   color: #ccc;
 }
 
-/* line 114, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 ul.small {
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
 
-/* line 119, ../scss/app.scss */
+/* line 124, ../scss/app.scss */
 .footer-bottom {
   padding: 0;
   color: #ccc;
 }
 
-/* line 125, ../scss/app.scss */
+/* line 130, ../scss/app.scss */
 #home-splash {
   padding-top: 130px;
   min-height: 475px;
   background: #522d86 url("../img/learn-aerial-home-photo.jpg") no-repeat center center;
   background-size: cover;
-  margin-top: 20px;
 }
-/* line 131, ../scss/app.scss */
+/* line 135, ../scss/app.scss */
 #home-splash p {
   color: #fff;
   font-weight: 100;
@@ -9629,36 +9633,36 @@ ul.small {
   font-size: 1.3rem;
   line-height: 1.5;
 }
-/* line 140, ../scss/app.scss */
+/* line 144, ../scss/app.scss */
 #home-splash a {
   color: #fff;
   text-decoration: underline;
 }
 
-/* line 146, ../scss/app.scss */
+/* line 150, ../scss/app.scss */
 .three-column h2 {
   font-size: 1.4rem;
   font-weight: 200;
   text-transform: capitalize;
 }
 
-/* line 153, ../scss/app.scss */
+/* line 157, ../scss/app.scss */
 .top-bar-section ul li > a {
   text-decoration: none;
 }
 
-/* line 157, ../scss/app.scss */
+/* line 161, ../scss/app.scss */
 .event-title {
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
-/* line 161, ../scss/app.scss */
+/* line 165, ../scss/app.scss */
 .event-title h1 {
   font-size: 2rem;
   line-height: 1.4;
 }
 
-/* line 167, ../scss/app.scss */
+/* line 171, ../scss/app.scss */
 .event-details {
   display: block;
   background: #f7f7f7;
@@ -9666,17 +9670,17 @@ ul.small {
   margin-bottom: 30px;
 }
 
-/* line 174, ../scss/app.scss */
+/* line 178, ../scss/app.scss */
 a.events-back {
   font-size: small;
 }
 
-/* line 178, ../scss/app.scss */
+/* line 182, ../scss/app.scss */
 .event-text strong {
   color: #575757;
 }
 
-/* line 183, ../scss/app.scss */
+/* line 187, ../scss/app.scss */
 .event-summary {
   display: block;
   height: 90px;
@@ -9684,14 +9688,14 @@ a.events-back {
   margin-bottom: 15px;
 }
 
-/* line 190, ../scss/app.scss */
+/* line 194, ../scss/app.scss */
 .event-thumbnail {
   display: block;
   float: left;
   margin-right: 10px;
 }
 
-/* line 196, ../scss/app.scss */
+/* line 200, ../scss/app.scss */
 .event-thumbnail-image {
   display: block;
   height: 70px;
@@ -9701,7 +9705,7 @@ a.events-back {
   background-position: center;
 }
 
-/* line 205, ../scss/app.scss */
+/* line 209, ../scss/app.scss */
 .summary-details {
   display: block;
   float: left;
@@ -9709,7 +9713,7 @@ a.events-back {
   padding: 0 10px;
 }
 
-/* line 213, ../scss/app.scss */
+/* line 217, ../scss/app.scss */
 span.summary-event-name {
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -9718,23 +9722,23 @@ span.summary-event-name {
   margin-bottom: 0.6rem;
 }
 
-/* line 221, ../scss/app.scss */
+/* line 225, ../scss/app.scss */
 a.summary-title {
   color: #7a7a7a;
   text-decoration: none;
 }
 
-/* line 226, ../scss/app.scss */
+/* line 230, ../scss/app.scss */
 .event-listings-all {
   margin-bottom: 100px;
 }
 
-/* line 231, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 span.summary-event-date {
   font-size: small;
 }
 
-/* line 236, ../scss/app.scss */
+/* line 240, ../scss/app.scss */
 span.summary-event-venue {
   font-size: small;
   text-transform: uppercase;
