@@ -240,3 +240,68 @@ span.summary-event-venue {
 	font-size: small;
 	text-transform: uppercase;
 }
+
+#hamburger span {
+	position: absolute;
+	display: block;
+	height: 0;
+	top: 50%;
+	margin-top: -0.5rem;
+	left: 0.90625rem;
+	box-shadow: 0 0px 0 1px $primary-color, 0 7px 0 1px $primary-color, 0 14px 0 1px $primary-color;
+	width: 1rem;
+
+}
+
+#hamburger {
+	position: relative;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+
+}
+
+#mobile-nav {
+	margin: 1rem 1rem 2rem;
+
+	.inner {
+		border-bottom: #7a7a7a 1px solid;
+		padding-bottom: 0.5em;
+	}
+
+	ul {
+		position: absolute;
+		top: 72px;
+		right: 1rem;
+		display: none;
+		z-index: 1000;
+		transition: all 0.5s ease-in-out;
+		border-left: $topbar-link-color 1px solid;
+		border-bottom: $topbar-link-color 1px solid;
+
+	}
+
+	li {
+		display: block;
+		background-color: white;
+		color: $topbar-link-color;
+		padding: 1rem;
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+
+		a {
+			text-decoration: none;
+
+		}
+
+		&.active {
+			background-color: $primary-color;
+			
+			a {
+				color: #fff;
+			}
+
+		}
+	}
+}

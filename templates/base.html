@@ -13,7 +13,23 @@
 
 <body>
 <div class="row">
-<nav class="top-bar large-12 columns">
+
+<nav class="hide-for-large-only" id="mobile-nav">
+  <div class="inner clearfix ">
+    <a href="{% url 'home' %}"><img src="{% static "img/learn-aerial-logo-440.gif" %}" alt="Learn Aerial Logo" height="36px" width="220px"></a>
+    <a class="menu-icon right " id="hamburger"><span></span></a>
+    <ul id="mobile-nav-links">
+      <li {% if current_page == 'about' %} class="active" {% endif %}><a href="{% url 'about' %}">About</a></li>
+      <li {% if current_page == 'schools' %} class="active" {% endif %}><a href="{% url 'schools' %}">Schools</a></li>
+      <li {% if current_page == 'venues' %} class="active" {% endif %}><a href="{% url 'venues' %}">Venues</a></li>
+      <li {% if current_page == 'companies' %} class="active" {% endif %}><a href="{% url 'companies' %}">Companies</a></li>
+      <li {% if current_page == 'event_listing' or current_page == 'events' %} class="active" {% endif %}><a href="{% url 'events' %}">Events</a></li>
+      <li {% if current_page == 'equipment' %} class="active" {% endif %}><a href="{% url 'equipment' %}">Equipment</a></li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="top-bar large-12 columns hide-for-small">
 <div class="inner clearfix">
   <ul class="title-area">
     <li class="name">
@@ -76,7 +92,13 @@
   ga('send', 'pageview');
 
 </script>
+<script type="text/javascript">
+  $('#hamburger').on('click', function(event) {
+    event.preventDefault();
+    $('#mobile-nav-links').toggle();
+  }); 
 
+</script>
 
 </body>
 </html>
