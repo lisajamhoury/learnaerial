@@ -14,7 +14,7 @@
 <body>
 <div class="row">
 
-<nav class="hide-for-large-only" id="mobile-nav">
+<nav class="hide-for-large-up" id="mobile-nav">
   <div class="inner clearfix ">
     <a href="{% url 'home' %}"><img src="{% static "img/learn-aerial-logo-440.gif" %}" alt="Learn Aerial Logo" height="36px" width="220px"></a>
     <a class="menu-icon right " id="hamburger"><span></span></a>
@@ -29,7 +29,7 @@
   </div>
 </nav>
 
-<nav class="top-bar large-12 columns hide-for-small">
+<nav class="top-bar large-12 columns show-for-large-up">
 <div class="inner clearfix">
   <ul class="title-area">
     <li class="name">
@@ -56,25 +56,26 @@
 <div class="large-12 columns">
 {% block content %}
 {% endblock %}
+
 </div>
 </div>
 
-<footer class="inner">
 <div class="row">
-  <div class="footer-bottom medium-4 medium-4 push-8 columns">
-    <ul class="footer-contact no-bullet small">
-            <li><a class="gray" href="mailto:learnaerial@gmail.com">Contact</a></li>
-        </ul>    
-  </div>
-  <div class="footer-bottom large-8 pull-4 columns">
-    <ul class="no-bullet small">
-            <li class="gray">Made with love in Brooklyn.</li>
-        </ul>    
-  </div>
-
+<div class="small-12 columns">
+  <footer class="inner">
+    <div class="footer-bottom small-8 columns">
+      <ul class="no-bullet small">
+              <li class="gray">Made with love in Brooklyn.</li>
+          </ul>    
+    </div>
+    <div class="footer-bottom small-4 columns right">
+      <ul class="footer-contact no-bullet small">
+              <li><a class="gray" href="mailto:learnaerial@gmail.com">Contact</a></li>
+          </ul>    
+    </div>
+  </footer>  
 </div>
-</footer>  
-
+</div>
 
 <script src="{% static 'js/jquery/dist/jquery.js' %}" ></script>
 <script src="{% static 'js/foundation/js/foundation.min.js' %}" ></script>

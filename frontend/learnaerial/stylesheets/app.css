@@ -11,8 +11,8 @@ meta.foundation-mq-small {
 
 /* line 356, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-mq-medium {
-  font-family: "/only screen and (min-width:0em)/";
-  width: 0em;
+  font-family: "/only screen and (min-width:40.063em)/";
+  width: 40.063em;
 }
 
 /* line 361, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -575,7 +575,7 @@ select {
     float: right;
   }
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 159, ../bower_components/foundation/scss/foundation/components/_grid.scss */
   .medium-push-0 {
     position: relative;
@@ -1906,7 +1906,7 @@ select {
     clear: both;
   }
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 61, ../bower_components/foundation/scss/foundation/components/_block-grid.scss */
   .medium-block-grid-1 > li {
     width: 100%;
@@ -2607,7 +2607,7 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 253, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
   button, .button {
     display: inline-block;
@@ -2685,7 +2685,7 @@ button::-moz-focus-inner {
 .button-group.stack-for-small > li:first-child button, .button-group.stack-for-small > li:first-child .button {
   border-left: 0;
 }
-@media only screen and (max-width: 0em) {
+@media only screen and (max-width: 40em) {
   /* line 157, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
   .button-group.stack-for-small > li {
     margin: 0 -2px;
@@ -2793,7 +2793,7 @@ button::-moz-focus-inner {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 167, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
   .button-group.radius.stack-for-small > * {
     margin: 0 -2px;
@@ -2827,7 +2827,7 @@ button::-moz-focus-inner {
     border-top-right-radius: 3px;
   }
 }
-@media only screen and (max-width: 0em) {
+@media only screen and (max-width: 40em) {
   /* line 167, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
   .button-group.radius.stack-for-small > * {
     margin: 0 -2px;
@@ -2953,7 +2953,7 @@ button::-moz-focus-inner {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 178, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
   .button-group.round.stack-for-small > * {
     margin: 0 -2px;
@@ -2987,7 +2987,7 @@ button::-moz-focus-inner {
     border-top-right-radius: 1000px;
   }
 }
-@media only screen and (max-width: 0em) {
+@media only screen and (max-width: 40em) {
   /* line 178, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
   .button-group.round.stack-for-small > * {
     margin: 0 -2px;
@@ -3310,7 +3310,7 @@ button::-moz-focus-inner {
   display: block;
 }
 
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 144, ../bower_components/foundation/scss/foundation/components/_clearing.scss */
   .clearing-main-prev,
   .clearing-main-next {
@@ -4485,7 +4485,7 @@ label.error {
   margin: auto;
   float: none;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 97, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
   .icon-bar.medium-vertical {
     height: 100%;
@@ -4550,7 +4550,7 @@ label.error {
 .icon-bar.two-up.vertical .item, .icon-bar.two-up.small-vertical .item {
   width: auto;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 225, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
   .icon-bar.two-up.medium-vertical .item {
     width: auto;
@@ -4570,7 +4570,7 @@ label.error {
 .icon-bar.three-up.vertical .item, .icon-bar.three-up.small-vertical .item {
   width: auto;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 239, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
   .icon-bar.three-up.medium-vertical .item {
     width: auto;
@@ -4590,7 +4590,7 @@ label.error {
 .icon-bar.four-up.vertical .item, .icon-bar.four-up.small-vertical .item {
   width: auto;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 253, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
   .icon-bar.four-up.medium-vertical .item {
     width: auto;
@@ -4610,7 +4610,7 @@ label.error {
 .icon-bar.five-up.vertical .item, .icon-bar.five-up.small-vertical .item {
   width: auto;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 267, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
   .icon-bar.five-up.medium-vertical .item {
     width: auto;
@@ -4630,7 +4630,7 @@ label.error {
 .icon-bar.six-up.vertical .item, .icon-bar.six-up.small-vertical .item {
   width: auto;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 281, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
   .icon-bar.six-up.medium-vertical .item {
     width: auto;
@@ -4832,7 +4832,7 @@ label.error {
 }
 
 /* Styles for screens that are at least 768px; */
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 192, ../bower_components/foundation/scss/foundation/components/_joyride.scss */
   .joyride-tip-guide {
     width: 300px;
@@ -5266,7 +5266,7 @@ kbd {
   display: none;
 }
 
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 335, ../bower_components/foundation/scss/foundation/components/_orbit.scss */
   .touch .orbit-container .orbit-prev,
   .touch .orbit-container .orbit-next {
@@ -5277,7 +5277,7 @@ kbd {
     display: block;
   }
 }
-@media only screen and (max-width: 0em) {
+@media only screen and (max-width: 40em) {
   /* line 345, ../bower_components/foundation/scss/foundation/components/_orbit.scss */
   .orbit-stack-on-small .orbit-slides-container {
     height: auto !important;
@@ -5699,7 +5699,7 @@ ul.pagination li {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   padding: 1.875rem;
 }
-@media only screen and (max-width: 0em) {
+@media only screen and (max-width: 40em) {
   /* line 167, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal, dialog {
     min-height: 100vh;
@@ -5717,7 +5717,7 @@ ul.pagination li {
 .reveal-modal > :last-child, dialog > :last-child {
   margin-bottom: 0;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 167, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal, dialog {
     width: 80%;
@@ -5727,7 +5727,7 @@ ul.pagination li {
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 167, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal, dialog {
     top: 6.25rem;
@@ -5745,7 +5745,7 @@ ul.pagination li {
 .reveal-modal.collapse, dialog.collapse {
   padding: 0;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 182, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.tiny, dialog.tiny {
     width: 30%;
@@ -5755,7 +5755,7 @@ ul.pagination li {
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 183, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.small, dialog.small {
     width: 40%;
@@ -5765,7 +5765,7 @@ ul.pagination li {
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 184, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.medium, dialog.medium {
     width: 60%;
@@ -5775,7 +5775,7 @@ ul.pagination li {
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 185, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.large, dialog.large {
     width: 70%;
@@ -5785,7 +5785,7 @@ ul.pagination li {
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 186, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.xlarge, dialog.xlarge {
     width: 95%;
@@ -5805,7 +5805,7 @@ ul.pagination li {
   max-width: none !important;
   margin-left: 0 !important;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 187, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.full, dialog.full {
     width: 100vw;
@@ -6407,7 +6407,7 @@ table tr td {
   padding: 0 0.9375rem;
 }
 
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 99, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
   .tabs.vertical {
     width: 20%;
@@ -6526,7 +6526,7 @@ table tr td {
   font-weight: normal;
 }
 
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 110, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
   .tooltip > .nub {
     border-color: transparent transparent #333333 transparent;
@@ -6561,8 +6561,8 @@ table tr td {
 }
 /* line 108, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 meta.foundation-mq-topbar {
-  font-family: "/only screen and (min-width:0em)/";
-  width: 0em;
+  font-family: "/only screen and (min-width:40.063em)/";
+  width: 40.063em;
 }
 
 /* Wrapped around .top-bar to contain to grid width */
@@ -6640,7 +6640,7 @@ meta.foundation-mq-topbar {
   margin-bottom: 0;
   font-size: 0.75rem;
 }
-@media only screen and (max-width: 0em) {
+@media only screen and (max-width: 40em) {
   /* line 169, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar .button, .top-bar button {
     position: relative;
@@ -7047,7 +7047,7 @@ meta.foundation-mq-topbar {
   display: block;
 }
 
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 448, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar {
     background: white;
@@ -7322,7 +7322,7 @@ meta.foundation-mq-topbar {
   text-align: justify !important;
 }
 
-@media only screen and (max-width: 0em) {
+@media only screen and (max-width: 40em) {
   /* line 162, ../bower_components/foundation/scss/foundation/components/_type.scss */
   .small-only-text-left {
     text-align: left !important;
@@ -7364,7 +7364,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important;
   }
 }
-@media only screen and (min-width: 0em) and (max-width: 0em) {
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
   /* line 162, ../bower_components/foundation/scss/foundation/components/_type.scss */
   .medium-only-text-left {
     text-align: left !important;
@@ -7385,7 +7385,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important;
   }
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 162, ../bower_components/foundation/scss/foundation/components/_type.scss */
   .medium-text-left {
     text-align: left !important;
@@ -7859,7 +7859,7 @@ blockquote p {
   padding: 0 0.0625rem;
 }
 
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 455, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
@@ -8084,7 +8084,7 @@ blockquote p {
   height: 2.8125rem;
   top: 0;
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 203, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
   .tab-bar-section.left, .tab-bar-section.right {
     text-align: left;
@@ -8247,7 +8247,7 @@ ul.off-canvas-list li a:hover {
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 276, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
   .move-right .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -8279,7 +8279,7 @@ ul.off-canvas-list li a:hover {
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 276, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
   .move-left .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -8311,7 +8311,7 @@ ul.off-canvas-list li a:hover {
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 276, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
   .offcanvas-overlap .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -8343,7 +8343,7 @@ ul.off-canvas-list li a:hover {
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 276, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
   .offcanvas-overlap-left .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -8375,7 +8375,7 @@ ul.off-canvas-list li a:hover {
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 276, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
   .offcanvas-overlap-right .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -8597,7 +8597,7 @@ ul.off-canvas-list li a:hover {
   }
 }
 /* medium displays */
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 40.063em) {
   /* line 244, ../bower_components/foundation/scss/foundation/components/_visibility.scss */
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xxlarge-only, .hide-for-xxlarge-up {
     display: inherit !important;
@@ -9078,92 +9078,100 @@ h1, h2 {
 h1 {
   display: block;
   margin-bottom: 1em;
+  font-size: 1.5rem;
 }
 
 /* line 61, ../scss/app.scss */
+h2 {
+  font-size: 1.4rem;
+  font-weight: 200;
+  text-transform: capitalize;
+}
+
+/* line 68, ../scss/app.scss */
 .top-bar-section li {
   font-size: 1.3em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-/* line 67, ../scss/app.scss */
+/* line 74, ../scss/app.scss */
 .top-bar {
   margin-top: 3em;
   margin-bottom: 3em;
   height: 3.3em;
 }
-/* line 71, ../scss/app.scss */
+/* line 78, ../scss/app.scss */
 .top-bar .inner {
   border-bottom: #7a7a7a 1px solid;
   padding-bottom: 0.5em;
 }
 
-/* line 77, ../scss/app.scss */
+/* line 84, ../scss/app.scss */
 dt {
   color: #575757;
 }
 
-/* line 81, ../scss/app.scss */
+/* line 88, ../scss/app.scss */
 .about-left {
   padding-right: 2em;
 }
 
-/* line 86, ../scss/app.scss */
+/* line 93, ../scss/app.scss */
 span.school-name {
   font-weight: 700;
   color: #333;
 }
 
-/* line 92, ../scss/app.scss */
+/* line 99, ../scss/app.scss */
 .welcome {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
-/* line 98, ../scss/app.scss */
+/* line 105, ../scss/app.scss */
 .inner {
   max-width: 62.5em;
   margin: 0 auto;
 }
 
-/* line 104, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 footer {
   display: block;
   border-top: solid 1px #ccc;
 }
 
-/* line 109, ../scss/app.scss */
+/* line 116, ../scss/app.scss */
 .footer-contact {
   display: block;
   float: right;
 }
 
-/* line 115, ../scss/app.scss */
+/* line 122, ../scss/app.scss */
 .gray {
   color: #ccc;
 }
 
-/* line 119, ../scss/app.scss */
+/* line 126, ../scss/app.scss */
 ul.small {
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
 
-/* line 124, ../scss/app.scss */
+/* line 131, ../scss/app.scss */
 .footer-bottom {
   padding: 0;
   color: #ccc;
 }
 
-/* line 130, ../scss/app.scss */
+/* line 137, ../scss/app.scss */
 #home-splash {
   padding-top: 130px;
   min-height: 475px;
   background: #522d86 url("../img/learn-aerial-home-photo.jpg") no-repeat center center;
   background-size: cover;
 }
-/* line 135, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 #home-splash p {
   color: #fff;
   font-weight: 100;
@@ -9172,17 +9180,10 @@ ul.small {
   font-size: 1.3rem;
   line-height: 1.5;
 }
-/* line 144, ../scss/app.scss */
+/* line 151, ../scss/app.scss */
 #home-splash a {
   color: #fff;
   text-decoration: underline;
-}
-
-/* line 150, ../scss/app.scss */
-.three-column h2 {
-  font-size: 1.4rem;
-  font-weight: 200;
-  text-transform: capitalize;
 }
 
 /* line 157, ../scss/app.scss */
@@ -9304,25 +9305,26 @@ span.summary-event-venue {
 
 /* line 264, ../scss/app.scss */
 #mobile-nav {
+  display: none;
   margin: 1rem 1rem 2rem;
 }
-/* line 267, ../scss/app.scss */
+/* line 268, ../scss/app.scss */
 #mobile-nav .inner {
   border-bottom: #7a7a7a 1px solid;
   padding-bottom: 0.5em;
 }
-/* line 272, ../scss/app.scss */
+/* line 273, ../scss/app.scss */
 #mobile-nav ul {
   position: absolute;
   top: 72px;
-  right: 1rem;
+  right: 0rem;
   display: none;
   z-index: 1000;
   transition: all 0.5s ease-in-out;
   border-left: #7a7a7a 1px solid;
   border-bottom: #7a7a7a 1px solid;
 }
-/* line 284, ../scss/app.scss */
+/* line 285, ../scss/app.scss */
 #mobile-nav li {
   display: block;
   background-color: white;
@@ -9332,15 +9334,26 @@ span.summary-event-venue {
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-/* line 293, ../scss/app.scss */
+/* line 294, ../scss/app.scss */
 #mobile-nav li a {
   text-decoration: none;
 }
-/* line 298, ../scss/app.scss */
+/* line 299, ../scss/app.scss */
 #mobile-nav li.active {
   background-color: #522387;
 }
-/* line 301, ../scss/app.scss */
+/* line 302, ../scss/app.scss */
 #mobile-nav li.active a {
   color: #fff;
+}
+
+@media only screen and (max-width: 40em) {
+  /* line 311, ../scss/app.scss */
+  #home-splash {
+    padding-top: 100px;
+  }
+  /* line 313, ../scss/app.scss */
+  #home-splash p {
+    font-size: 18px;
+  }
 }

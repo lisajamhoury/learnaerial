@@ -53,9 +53,16 @@ h1, h2 {
 }
 
 h1 {
-
 	display: block;
 	margin-bottom: 1em;
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1.4rem;
+	font-weight: 200;
+	text-transform: capitalize;
+
 }
 
 .top-bar-section li {
@@ -145,13 +152,6 @@ ul.small {
 		color: #fff;
 		text-decoration: underline;
 	}
-}
-
-.three-column h2 {
-	font-size: 1.4rem;
-	font-weight: 200;
-	text-transform: capitalize;
-
 }
 
 .top-bar-section ul li > a {
@@ -262,6 +262,7 @@ span.summary-event-venue {
 }
 
 #mobile-nav {
+	display: none;
 	margin: 1rem 1rem 2rem;
 
 	.inner {
@@ -272,7 +273,7 @@ span.summary-event-venue {
 	ul {
 		position: absolute;
 		top: 72px;
-		right: 1rem;
+		right: 0rem;
 		display: none;
 		z-index: 1000;
 		transition: all 0.5s ease-in-out;
@@ -304,4 +305,14 @@ span.summary-event-venue {
 
 		}
 	}
+}
+
+@media #{$small-only} {
+	#home-splash {
+		padding-top: 100px;
+		p {
+			font-size: 18px;
+		}
+	}
+
 }
