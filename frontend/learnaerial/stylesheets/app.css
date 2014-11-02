@@ -9223,67 +9223,72 @@ a.events-back {
 /* line 187, ../scss/app.scss */
 .event-summary {
   display: block;
-  height: 90px;
+  min-height: 90px;
   border-bottom: 1px solid #dddddd;
   margin-bottom: 15px;
+  padding-top: 8px;
+  padding-bottom: 15px;
 }
 
-/* line 194, ../scss/app.scss */
+/* line 196, ../scss/app.scss */
 .event-thumbnail {
   display: block;
-  float: left;
-  margin-right: 10px;
+  margin-top: 7px;
 }
 
-/* line 200, ../scss/app.scss */
+/* line 203, ../scss/app.scss */
 .event-thumbnail-image {
   display: block;
-  height: 70px;
-  width: 70px;
+  height: 90px;
+  width: 90px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 3px;
 }
 
-/* line 209, ../scss/app.scss */
+/* line 213, ../scss/app.scss */
 .summary-details {
   display: block;
-  float: left;
-  margin-left: 10px;
-  padding: 0 10px;
 }
 
-/* line 217, ../scss/app.scss */
+/* line 221, ../scss/app.scss */
 span.summary-event-name {
   text-transform: uppercase;
   font-size: 1.5rem;
+  line-height: 2rem;
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
 }
 
-/* line 224, ../scss/app.scss */
+/* line 229, ../scss/app.scss */
 a.summary-title {
   color: #7a7a7a;
   text-decoration: none;
 }
 
-/* line 229, ../scss/app.scss */
+/* line 234, ../scss/app.scss */
 .event-listings-all {
   margin-bottom: 100px;
 }
 
-/* line 234, ../scss/app.scss */
+/* line 239, ../scss/app.scss */
+.first {
+  border-top: 1px solid #dddddd;
+}
+
+/* line 244, ../scss/app.scss */
 span.summary-event-date {
   font-size: small;
 }
 
-/* line 239, ../scss/app.scss */
+/* line 249, ../scss/app.scss */
 span.summary-event-venue {
   font-size: small;
   text-transform: uppercase;
 }
 
-/* line 244, ../scss/app.scss */
+/* line 254, ../scss/app.scss */
 #hamburger span {
   position: absolute;
   display: block;
@@ -9295,7 +9300,7 @@ span.summary-event-venue {
   width: 1rem;
 }
 
-/* line 256, ../scss/app.scss */
+/* line 266, ../scss/app.scss */
 #hamburger {
   position: relative;
   display: block;
@@ -9303,17 +9308,17 @@ span.summary-event-venue {
   width: 3rem;
 }
 
-/* line 264, ../scss/app.scss */
+/* line 274, ../scss/app.scss */
 #mobile-nav {
   display: none;
   margin: 1rem 1rem 2rem;
 }
-/* line 268, ../scss/app.scss */
+/* line 278, ../scss/app.scss */
 #mobile-nav .inner {
   border-bottom: #7a7a7a 1px solid;
   padding-bottom: 0.5em;
 }
-/* line 273, ../scss/app.scss */
+/* line 283, ../scss/app.scss */
 #mobile-nav ul {
   position: absolute;
   top: 72px;
@@ -9324,7 +9329,7 @@ span.summary-event-venue {
   border-left: #7a7a7a 1px solid;
   border-bottom: #7a7a7a 1px solid;
 }
-/* line 285, ../scss/app.scss */
+/* line 295, ../scss/app.scss */
 #mobile-nav li {
   display: block;
   background-color: white;
@@ -9334,25 +9339,25 @@ span.summary-event-venue {
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-/* line 294, ../scss/app.scss */
+/* line 304, ../scss/app.scss */
 #mobile-nav li a {
   text-decoration: none;
 }
-/* line 299, ../scss/app.scss */
+/* line 309, ../scss/app.scss */
 #mobile-nav li.active {
   background-color: #522387;
 }
-/* line 302, ../scss/app.scss */
+/* line 312, ../scss/app.scss */
 #mobile-nav li.active a {
   color: #fff;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 311, ../scss/app.scss */
+  /* line 321, ../scss/app.scss */
   #home-splash {
     padding-top: 100px;
   }
-  /* line 313, ../scss/app.scss */
+  /* line 323, ../scss/app.scss */
   #home-splash p {
     font-size: 18px;
   }

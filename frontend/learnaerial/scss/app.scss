@@ -186,39 +186,44 @@ a.events-back {
 
 .event-summary {
 	display: block;
-	height: 90px;
+	min-height: 90px;
 	border-bottom: 1px solid #dddddd;
 	margin-bottom: 15px;
+	padding-top: 8px;
+	padding-bottom: 15px;
 }
 
 .event-thumbnail {
 	display: block;
-	float: left;
-	margin-right: 10px;
+	margin-top: 7px;
+	// float: left;
+	// margin-right: 10px;
 }
 
 .event-thumbnail-image {
 	display: block;
-	height: 70px;
-	width: 70px;
+	height: 90px;
+	width: 90px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	border-radius: 3px;
 }
 
 .summary-details {
 	display: block;
-	float: left;
-	margin-left: 10px;
-	padding: 0 10px;
+	// float: left;
+	// margin-left: 10px;
+	// padding: 0 10px;
 	
 }
 
 span.summary-event-name {
 	text-transform: uppercase;
 	font-size: 1.5rem;
+	line-height: 2rem;
 	display: block;
-	margin-bottom: 0.6rem;
+	margin-bottom: 0.2rem;
 }
 
 a.summary-title {
@@ -228,6 +233,11 @@ a.summary-title {
 
 .event-listings-all {
 	margin-bottom: 100px;
+}
+
+
+.first {
+	border-top: 1px solid #dddddd;
 }
 
 
@@ -316,3 +326,4 @@ span.summary-event-venue {
 	}
 
 }
+
