@@ -2,6 +2,7 @@ from django.db import models
 
 class Event(models.Model):
 	published = models.BooleanField(default=False)
+	ongoing = models.BooleanField(default=False)
 	image = models.ImageField(null=True, blank=True, upload_to='events')
 	name = models.CharField(max_length=500)
 	slug = models.SlugField()
@@ -13,6 +14,7 @@ class Event(models.Model):
 	price = models.CharField(max_length=500, null=True, blank=True)
 	link = models.CharField(max_length=500, null=True, blank=True)
 	description = models.TextField(null=True, blank=True)
+
 
 	def __unicode__(self):
 		return u'%s' % self.name

@@ -14,7 +14,31 @@
 
 	<section class="event-listings-all">
 
-	{% for event in events %}
+		{% for event in events %}
+		<div class="event-summary {%if forloop.first %}first{%endif%} row collapse">
+			
+			<div class="event-thumbnail large-2 columns">
+				<a href="{% url 'event-listing' event.slug %}">
+					<div class="event-thumbnail-image" style="background-image: url('{{ event.image.url }}')"></div>
+				</a>
+			</div>
+
+			<div class="summary-details large-10 columns">
+			<span class="summary-event-name"><a class="summary-title" href="{% url 'event-listing' event.slug %}">{{ event.name|truncatechars:75 }}</a></span>
+			<span class="summary-event-venue">{{ event.venue }}</span>
+			<span class="summary-event-date"> | {{ event.start_date}} 
+			{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %} | <a href="{% url 'event-listing' event.slug %}">Event details</a><br>
+			</div>
+		</div>
+		{% endfor %}
+
+	</section>
+
+
+	<section class="event-listings-ongoing">
+
+	<h2>Ongoing Events</h2>
+	{% for event in ongoing_events %}
 	<div class="event-summary {%if forloop.first %}first{%endif%} row collapse">
 		
 		<div class="event-thumbnail large-2 columns">
@@ -26,18 +50,17 @@
 		<div class="summary-details large-10 columns">
 		<span class="summary-event-name"><a class="summary-title" href="{% url 'event-listing' event.slug %}">{{ event.name|truncatechars:75 }}</a></span>
 		<span class="summary-event-venue">{{ event.venue }}</span>
-		<span class="summary-event-date"> | {{ event.start_date}} 
-		{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %} | <a href="{% url 'event-listing' event.slug %}">Event details</a><br>
+		<span class="summary-event-date"> | <a href="{% url 'event-listing' event.slug %}">Event details</a></span><br>
 		</div>
-		
-		<!-- <div class="clearfix">	 -->
-		<!-- </div> -->
-
 	</div>
 	{% endfor %}
 
-
 	</section>
+
+	
+	<p><a class="archive-link" href="{% url 'events-archive' %}">View past events</a></p>
+
+
 	</div>
 	</div>
 

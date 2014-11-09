@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     url(r'^companies$', 'main.views.companies', name='companies'),
     url(r'^equipment$', 'main.views.equipment', name='equipment'),
     url(r'^events$', 'events.views.events', name='events'),
+    url(r'^events/archive$', 'events.views.events_archive', name='events-archive'),
     url(r'^events/(?P<slug>[\w\s,.%&-]+)$', 'events.views.event_listing', name='event-listing'),
 
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
