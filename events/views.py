@@ -10,7 +10,7 @@ def events(request):
 	# events = Event.objects.filter(ongoing=False, published=True).exclude(end_date__lt=now, start_date__lte=now).order_by('start_date')
 	events = Event.objects\
 		.filter(ongoing=False, published=True)\
-		.exclude(Q(end_date__lt=now) | Q(end_date__isnull=True), start_date__lte=now)\
+		.exclude(Q(end_date__lt=now) | Q(end_date__isnull=True), start_date__lt=now)\
 		.order_by('start_date')
 
 	ongoing_events = Event.objects.filter(ongoing=True, published=True)
