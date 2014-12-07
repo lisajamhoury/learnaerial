@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse 
 
 class Event(models.Model):
 	published = models.BooleanField(default=False)
@@ -18,3 +19,6 @@ class Event(models.Model):
 
 	def __unicode__(self):
 		return u'%s' % self.name
+
+	def get_absolute_url(self):
+		return reverse('event-listing', args=[self.slug]) 

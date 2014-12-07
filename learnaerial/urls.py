@@ -1,8 +1,10 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.conf.urls.static import static
-
 from django.contrib import admin
+
+from events.feed import UpcomingEventsFeed
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -18,6 +20,9 @@ urlpatterns = patterns('',
     url(r'^equipment$', 'main.views.equipment', name='equipment'),
     url(r'^events$', 'events.views.events', name='events'),
     url(r'^events/archive$', 'events.views.events_archive', name='events-archive'),
+    url(r'^events/feed$', UpcomingEventsFeed()),
     url(r'^events/(?P<slug>[\w\s,.%&-]+)$', 'events.views.event_listing', name='event-listing'),
+
+
 
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
