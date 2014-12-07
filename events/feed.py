@@ -19,3 +19,6 @@ class UpcomingEventsFeed(Feed):
     def item_description(self, item):
         return item.description
 
+    def item_pubdate(self, item):
+        return datetime.datetime.combine(item.start_date, datetime.time())
+
