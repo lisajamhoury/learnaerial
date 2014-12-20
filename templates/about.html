@@ -1,37 +1,70 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block title %}About{% endblock %}
 {% block content %}
 
 
-	<h1>About </h1>
+<h1>About </h1>
 
 <div class="row">
 	<div class="about-left large-6 columns">
-	<p>Hi. My name is Lisa Jamhoury. I’m an aerial instructor and performer in New York City. I’ve been teaching aerial for a few years now and I find that my students always ask the same questions. 
+	<p>Learn Aerial is a hub for aerial artists and appreciators. It was started by Lisa Jamhoury, an aerial instructor and performer, to answer the most common questions aerial students ask about schools, venues, companies and events. </p>
 
-	<p>I’ve been finding myself wishing there was a place online where they could find what they're looking for.</p>
+	<p>It also aims to be a resource for instructors and performers looking to promote their events and keep up with their community.</p>  
 	</div>
 
 	<div class="about-right large-6 offset-1 columns">
-	<p>This site is my try at answering the most common questions I get about aerial acrobatics. It's a work in progress. If you notice something missing or incorrect, please <a href="mailto:learnaerial@gmail.com">let me know</a>!</p>
-
-	<p>Want to learn more about me and my classes? Hop over to <a href="http://lisajamhoury.com/" target="_blank">lisajamhoury.com</a>.</p>
+	<p>Currently Learn Aerial serves New York City only, <a href="mailto:learnaerial@gmail.com">be in touch</a> if you are interested in starting up a similar site in your city.</p>
+	<p>If you notice something missing or incorrect, or want us to include your upcoming classes, events and workshops in the <a href="{% url 'events' %}">event listings</a> please <a href="mailto:learnaerial@gmail.com">get in touch</a>.</p>
 	</div>
 </div>
+
+<h1>Team </h1>
 	
 <div class="row">
-<div class="large-8 columns">
-	<h2>FAQ</h2>
+	<ul class="no-bullet">
+		<li>
+			<div class="team-left large-5 columns">
+			<img src="{% static "img/lisa.jpg" %}" alt="Lisa Jamhoury">
+			</div>
 
+			<div class="team-right large-7 columns">
+			<h3>Lisa Jamhoury</h3>
+			<p>Lisa Jamhoury has been adorning airspace in Brooklyn and beyond since early 2009. She performs and choreographs aerial dance pieces on various apparatuses. When she needs a bit of grounding, she dons a pair of stilts or grabs her fire poi. She has performed across the United States, from New York to Hawaii in several venues including Brooklyn Bowl, Urban Outfitters, and Soho Mixed Media Bar in Honolulu. Lisa co-choreographed a three-part aerial performance for TEDx Brooklyn 2011.<br/> 
+			<a href="http://aerial.lisajamhoury.com" target="_blank">aerial.lisajamhoury.com</a></p>
+			</div>
+		</li>
+
+		<div class="clearfix"></div>
+		
+		<li>
+			<div class="team-left large-5 columns">
+			<img src="{% static "img/heather.jpg" %}" alt="Heather Campbell">
+			</div>
+
+			<div class="team-right large-7 columns">
+			<h3>Heather Campbell</h3>
+			<p>Heather Campbell has been practicing aerial silks for the past few years in the New York area and is one of Lisa's first students. Years before starting to learn aerial, Heather's interest was sparked at circus events where she was a clown and juggler. For Heather, aerial provides a counterbalance to her otherwise cerebral life as a PhD student of speech science.</p>
+			</div>
+		</li>
+
+	</ul>
+</div>
+
+<h2>FAQ for Beginner Aerialists</h2>
+
+<div class="row">
+	<div class="large-8 columns">
+	
 	<dl>
 	<dt>I’ve never done aerial before, where can I learn?</dt>
 	<dd>NYC has many great <a href="{% url 'schools' %}">aerial schools</a>. Several <a href="{% url 'companies' %}">aerial companies</a> also hold workshops or private classes, don’t miss out on learning about them as well. </dd>
 
 	<dt>Where can I see other aerialists perform?</dt>
-	<dd>Several of the <a href="{% url 'schools' %}">aerial schools</a> hold regular performances. There are also several <a href="{% url 'venues' %}">aerial venues</a> that hold regular aerial or cabaret-style shows. I've listed many of the upcoming events on the <a href="{% url 'events' %}">events page</a>.</dd>
+	<dd>Several of the <a href="{% url 'schools' %}">aerial schools</a> hold regular performances. There are also several <a href="{% url 'venues' %}">aerial venues</a> that hold regular aerial or cabaret-style shows. Upcoming events are listed on the <a href="{% url 'events' %}">events page</a>.</dd>
 
 	<dt>I’m a beginner aerial student and would like to try out performing. Where can I perform?</dt>
-	<dd>I’m recommend talking to your teacher(s) about opportunities. Several of the <a href="{% url 'schools' %}">aerial schools</a> hold student shows and performance workshops. </dd>
+	<dd>Talk to your teacher(s) about opportunities. Several of the <a href="{% url 'schools' %}">aerial schools</a> hold student shows and performance workshops. </dd>
 
 	<dt>Where do I buy aerial equipment of my own? </dt>
 	<dd>You can find a list of basics on the <a href="{% url 'equipment' %}">equipment page</a>. Rigging without proper knowledge can be very dangerous&mdash;even life threatening. Please talk to an experienced aerialist and professional rigger before getting your own equipment. </dd>

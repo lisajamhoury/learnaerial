@@ -1,7 +1,9 @@
 import datetime
 from django.contrib.syndication.views import Feed
 from django.core.urlresolvers import reverse
+from django.template.defaultfilters import truncatewords
 from events.models import Event
+
 
 class UpcomingEventsFeed(Feed):
     title = "Learn Aerial Upcoming Events NYC"
@@ -17,7 +19,8 @@ class UpcomingEventsFeed(Feed):
         return item.name
 
     def item_description(self, item):
-        return item.description
+        truncated_description = truncatewords(item.description, 50)
+        return truncated_description
 
     def item_pubdate(self, item):
         return datetime.datetime.combine(item.start_date, datetime.time())

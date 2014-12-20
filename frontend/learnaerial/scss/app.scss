@@ -65,6 +65,13 @@ h2 {
 
 }
 
+h3 {
+	font-size:1.1rem;
+	font-weight: 700;
+	color: #575757;
+	margin-bottom: 0rem;
+}
+
 .top-bar-section li {
 	font-size: 1.3em;
 	text-transform: uppercase;
@@ -87,12 +94,6 @@ dt {
 
 .about-left {
 	padding-right: 2em;
-}
-
-
-span.school-name {
-	font-weight: 700;
-	color: #333;
 }
 
 
@@ -325,6 +326,18 @@ span.summary-event-venue {
 		}
 	}
 }
+
+.team-left img {
+	margin-bottom: 3rem;
+	border-radius: 3px;
+}
+
+.team-right h3 {
+	margin-bottom: 0.6rem;
+}
+
+
+
 
 @media #{$small-only} {
 	#home-splash {
