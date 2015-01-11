@@ -9077,17 +9077,18 @@ h1, h2 {
 h1 {
   display: block;
   margin-bottom: 1em;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
-/* line 60, ../scss/app.scss */
+/* line 61, ../scss/app.scss */
 h2 {
   text-transform: uppercase;
   font-size: 1.4rem;
   text-transform: capitalize;
 }
 
-/* line 67, ../scss/app.scss */
+/* line 68, ../scss/app.scss */
 h3 {
   font-size: 1.1rem;
   font-weight: 700;
@@ -9095,89 +9096,89 @@ h3 {
   margin-bottom: 0rem;
 }
 
-/* line 74, ../scss/app.scss */
+/* line 75, ../scss/app.scss */
 .top-bar-section li {
   font-size: 1.3em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-/* line 80, ../scss/app.scss */
+/* line 81, ../scss/app.scss */
 .top-bar {
   margin-top: 3em;
   margin-bottom: 3em;
   height: 3.3em;
 }
-/* line 84, ../scss/app.scss */
+/* line 85, ../scss/app.scss */
 .top-bar .inner {
   border-bottom: #7a7a7a 1px solid;
   padding-bottom: 0.5em;
 }
 
-/* line 90, ../scss/app.scss */
+/* line 91, ../scss/app.scss */
 dt {
   color: #575757;
 }
 
-/* line 94, ../scss/app.scss */
+/* line 95, ../scss/app.scss */
 .about-left {
   padding-right: 2em;
 }
 
-/* line 99, ../scss/app.scss */
+/* line 100, ../scss/app.scss */
 .welcome {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
-/* line 105, ../scss/app.scss */
+/* line 106, ../scss/app.scss */
 .inner {
   max-width: 62.5em;
   margin: 0 auto;
 }
 
-/* line 111, ../scss/app.scss */
+/* line 112, ../scss/app.scss */
 footer {
   display: block;
   border-top: solid 1px #ccc;
 }
 
-/* line 116, ../scss/app.scss */
+/* line 117, ../scss/app.scss */
 .footer-contact {
   display: block;
   float: right;
 }
 
-/* line 122, ../scss/app.scss */
+/* line 123, ../scss/app.scss */
 .gray {
   color: #ccc;
 }
 
-/* line 126, ../scss/app.scss */
+/* line 127, ../scss/app.scss */
 ul.small {
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
 
-/* line 131, ../scss/app.scss */
+/* line 132, ../scss/app.scss */
 .footer-bottom {
   padding: 0;
   color: #ccc;
 }
 
-/* line 137, ../scss/app.scss */
+/* line 138, ../scss/app.scss */
 footer.inner {
   margin-top: 5rem;
 }
 
-/* line 141, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 #home-splash {
   padding-top: 130px;
   min-height: 475px;
   background: #522d86 url("../img/learn-aerial-home-photo.jpg") no-repeat center center;
   background-size: cover;
 }
-/* line 146, ../scss/app.scss */
+/* line 147, ../scss/app.scss */
 #home-splash p {
   color: #fff;
   font-weight: 100;
@@ -9186,29 +9187,29 @@ footer.inner {
   font-size: 1.3rem;
   line-height: 1.5;
 }
-/* line 155, ../scss/app.scss */
+/* line 156, ../scss/app.scss */
 #home-splash a {
   color: #fff;
   text-decoration: underline;
 }
 
-/* line 161, ../scss/app.scss */
+/* line 162, ../scss/app.scss */
 .top-bar-section ul li > a {
   text-decoration: none;
 }
 
-/* line 165, ../scss/app.scss */
+/* line 166, ../scss/app.scss */
 .event-title {
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
-/* line 169, ../scss/app.scss */
+/* line 170, ../scss/app.scss */
 .event-title h1 {
   font-size: 2rem;
   line-height: 1.4;
 }
 
-/* line 175, ../scss/app.scss */
+/* line 176, ../scss/app.scss */
 .event-details {
   display: block;
   background: #f7f7f7;
@@ -9216,17 +9217,17 @@ footer.inner {
   margin-bottom: 30px;
 }
 
-/* line 182, ../scss/app.scss */
+/* line 183, ../scss/app.scss */
 a.events-back {
   font-size: small;
 }
 
-/* line 186, ../scss/app.scss */
+/* line 187, ../scss/app.scss */
 .event-text strong {
   color: #575757;
 }
 
-/* line 191, ../scss/app.scss */
+/* line 192, ../scss/app.scss */
 .event-summary {
   display: block;
   min-height: 90px;
@@ -9236,13 +9237,13 @@ a.events-back {
   padding-bottom: 15px;
 }
 
-/* line 200, ../scss/app.scss */
+/* line 201, ../scss/app.scss */
 .event-thumbnail {
   display: block;
   margin-top: 7px;
 }
 
-/* line 207, ../scss/app.scss */
+/* line 208, ../scss/app.scss */
 .event-thumbnail-image {
   display: block;
   height: 90px;
@@ -9253,12 +9254,12 @@ a.events-back {
   border-radius: 3px;
 }
 
-/* line 217, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
 .summary-details {
   display: block;
 }
 
-/* line 225, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 span.summary-event-name {
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -9267,41 +9268,42 @@ span.summary-event-name {
   margin-bottom: 0.2rem;
 }
 
-/* line 233, ../scss/app.scss */
+/* line 234, ../scss/app.scss */
 a.summary-title {
   color: #222;
   font-weight: 200;
+  text-transform: capitalize;
   text-decoration: none;
 }
 
-/* line 239, ../scss/app.scss */
+/* line 241, ../scss/app.scss */
 .event-listings-all {
   margin-bottom: 100px;
 }
 
-/* line 243, ../scss/app.scss */
+/* line 245, ../scss/app.scss */
 a.archive-link {
   display: block;
   margin-top: 3rem;
 }
 
-/* line 249, ../scss/app.scss */
+/* line 251, ../scss/app.scss */
 .first {
   border-top: 1px solid #dddddd;
 }
 
-/* line 254, ../scss/app.scss */
+/* line 256, ../scss/app.scss */
 span.summary-event-date {
   font-size: small;
 }
 
-/* line 259, ../scss/app.scss */
+/* line 261, ../scss/app.scss */
 span.summary-event-venue {
   font-size: small;
   text-transform: uppercase;
 }
 
-/* line 264, ../scss/app.scss */
+/* line 266, ../scss/app.scss */
 #hamburger span {
   position: absolute;
   display: block;
@@ -9313,7 +9315,7 @@ span.summary-event-venue {
   width: 1rem;
 }
 
-/* line 276, ../scss/app.scss */
+/* line 278, ../scss/app.scss */
 #hamburger {
   position: relative;
   display: block;
@@ -9321,17 +9323,17 @@ span.summary-event-venue {
   width: 3rem;
 }
 
-/* line 284, ../scss/app.scss */
+/* line 286, ../scss/app.scss */
 #mobile-nav {
   display: none;
   margin: 1rem 1rem 2rem;
 }
-/* line 288, ../scss/app.scss */
+/* line 290, ../scss/app.scss */
 #mobile-nav .inner {
   border-bottom: #7a7a7a 1px solid;
   padding-bottom: 0.5em;
 }
-/* line 293, ../scss/app.scss */
+/* line 295, ../scss/app.scss */
 #mobile-nav ul {
   position: absolute;
   top: 72px;
@@ -9342,7 +9344,7 @@ span.summary-event-venue {
   border-left: #7a7a7a 1px solid;
   border-bottom: #7a7a7a 1px solid;
 }
-/* line 305, ../scss/app.scss */
+/* line 307, ../scss/app.scss */
 #mobile-nav li {
   display: block;
   background-color: white;
@@ -9352,41 +9354,41 @@ span.summary-event-venue {
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-/* line 314, ../scss/app.scss */
+/* line 316, ../scss/app.scss */
 #mobile-nav li a {
   text-decoration: none;
 }
-/* line 319, ../scss/app.scss */
+/* line 321, ../scss/app.scss */
 #mobile-nav li.active {
   background-color: #522387;
 }
-/* line 322, ../scss/app.scss */
+/* line 324, ../scss/app.scss */
 #mobile-nav li.active a {
   color: #fff;
 }
 
-/* line 330, ../scss/app.scss */
+/* line 332, ../scss/app.scss */
 .team-left img {
   margin-bottom: 3rem;
   border-radius: 3px;
 }
 
-/* line 335, ../scss/app.scss */
+/* line 337, ../scss/app.scss */
 .team-right h3 {
   margin-bottom: 0.6rem;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 343, ../scss/app.scss */
+  /* line 345, ../scss/app.scss */
   #home-splash {
     padding-top: 100px;
   }
-  /* line 345, ../scss/app.scss */
+  /* line 347, ../scss/app.scss */
   #home-splash p {
     font-size: 18px;
   }
 }
-/* line 355, ../scss/app.scss */
+/* line 357, ../scss/app.scss */
 .signup-widget h2 {
   font-size: 1rem;
   text-transform: uppercase;
@@ -9394,7 +9396,7 @@ span.summary-event-venue {
   color: #222;
   margin-bottom: 1.5rem;
 }
-/* line 363, ../scss/app.scss */
+/* line 365, ../scss/app.scss */
 .signup-widget input#mc-embedded-subscribe {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -9405,12 +9407,12 @@ span.summary-event-venue {
 }
 
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  /* line 378, ../scss/app.scss */
+  /* line 380, ../scss/app.scss */
   .signup-widget {
     width: 30%;
   }
 }
-/* line 383, ../scss/app.scss */
+/* line 385, ../scss/app.scss */
 div.mc-field-group input {
   color: #222;
 }
