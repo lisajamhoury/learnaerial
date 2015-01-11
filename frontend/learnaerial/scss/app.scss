@@ -47,7 +47,6 @@ body {
 
 
 h1, h2 {
-	text-transform: uppercase;
 	font-weight: 200;
 
 }
@@ -55,12 +54,12 @@ h1, h2 {
 h1 {
 	display: block;
 	margin-bottom: 1em;
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 h2 {
+	text-transform: uppercase;
 	font-size: 1.4rem;
-	font-weight: 200;
 	text-transform: capitalize;
 
 }
@@ -232,7 +231,8 @@ span.summary-event-name {
 }
 
 a.summary-title {
-	color: #7a7a7a;	
+	color: #222;
+	font-weight: 200;
 	text-decoration: none;
 }
 
