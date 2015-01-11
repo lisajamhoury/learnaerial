@@ -4054,8 +4054,8 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  box-shadow: 0 0 5px #999999;
-  border-color: #999999;
+  box-shadow: 0 0 5px #311551;
+  border-color: #311551;
 }
 /* line 132, ../bower_components/foundation/scss/foundation/components/_forms.scss */
 input[type="text"]:focus,
@@ -4074,7 +4074,7 @@ input[type="url"]:focus,
 input[type="color"]:focus,
 textarea:focus {
   background: #fafafa;
-  border-color: #999999;
+  border-color: #311551;
   outline: none;
 }
 /* line 138, ../bower_components/foundation/scss/foundation/components/_forms.scss */
@@ -4284,7 +4284,7 @@ select.radius {
 /* line 354, ../bower_components/foundation/scss/foundation/components/_forms.scss */
 select:hover {
   background-color: #f3f3f3;
-  border-color: #999999;
+  border-color: #311551;
 }
 /* line 359, ../bower_components/foundation/scss/foundation/components/_forms.scss */
 select:disabled {
@@ -9385,4 +9385,32 @@ span.summary-event-venue {
   #home-splash p {
     font-size: 18px;
   }
+}
+/* line 355, ../scss/app.scss */
+.signup-widget h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+/* line 363, ../scss/app.scss */
+.signup-widget input#mc-embedded-subscribe {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  /* line 378, ../scss/app.scss */
+  .signup-widget {
+    width: 30%;
+  }
+}
+/* line 383, ../scss/app.scss */
+div.mc-field-group input {
+  color: #222;
 }

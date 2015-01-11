@@ -99,8 +99,17 @@
     event.preventDefault();
     $('#mobile-nav-links').toggle();
   }); 
-
+  
+  // L33T stuff to clear the form fields
+  $('#mc-embedded-subscribe-form').on('submit', function(event){
+    setTimeout(function() {
+      $('#mc-embedded-subscribe-form').find("input[type=text], input[type=email]").val('');
+    }, 200);
+  });
+  
+  // Lisa is L33t. Just in case you were wondering.          
 </script>
+
 
 </body>
 </html>

@@ -8,60 +8,92 @@
 
 
 	<div class="row">
-	<div class="large-8 columns">
-	<p>Events in New York City are listed by date.<!--  Subscribe to receive our weekly listings email. --> If you'd like to list your event, <a href="mailto:learnaerial@gmail.com">email us</a>. </p><br>
-		
-
-	<section class="event-listings-all">
-
-		{% for event in events %}
-		<div class="event-summary {%if forloop.first %}first{%endif%} row collapse">
+		<div class="large-8 columns">
+		<p>Events in New York City are listed by date.<!--  Subscribe to receive our weekly listings email. --> If you'd like to list your event, <a href="mailto:learnaerial@gmail.com">email us</a>. </p><br>
 			
-			<div class="event-thumbnail large-2 columns">
-				<a href="{% url 'event-listing' event.slug %}">
-					<div class="event-thumbnail-image" style="background-image: url('{{ event.image.url }}')"></div>
-				</a>
+
+			<section class="event-listings-all">
+
+				{% for event in events %}
+				<div class="event-summary {%if forloop.first %}first{%endif%} row collapse">
+					
+					<div class="event-thumbnail large-2 columns">
+						<a href="{% url 'event-listing' event.slug %}">
+							<div class="event-thumbnail-image" style="background-image: url('{{ event.image.url }}')"></div>
+						</a>
+					</div>
+
+					<div class="summary-details large-10 columns">
+					<span class="summary-event-name"><a class="summary-title" href="{% url 'event-listing' event.slug %}">{{ event.name|truncatechars:75 }}</a></span>
+					<span class="summary-event-venue">{{ event.venue }}</span>
+					<span class="summary-event-date"> | {{ event.start_date}} 
+					{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %} | <a href="{% url 'event-listing' event.slug %}">Event details</a><br>
+					</div>
+				</div>
+				{% endfor %}
+
+			</section>
+
+
+			<section class="event-listings-ongoing">
+
+			<h2>Ongoing Events</h2>
+			{% for event in ongoing_events %}
+			<div class="event-summary {%if forloop.first %}first{%endif%} row collapse">
+				
+				<div class="event-thumbnail large-2 columns">
+					<a href="{% url 'event-listing' event.slug %}">
+						<div class="event-thumbnail-image" style="background-image: url('{{ event.image.url }}')"></div>
+					</a>
+				</div>
+
+				<div class="summary-details large-10 columns">
+				<span class="summary-event-name"><a class="summary-title" href="{% url 'event-listing' event.slug %}">{{ event.name|truncatechars:75 }}</a></span>
+				<span class="summary-event-venue">{{ event.venue }}</span>
+				<span class="summary-event-date"> | <a href="{% url 'event-listing' event.slug %}">Event details</a></span><br>
+				</div>
+			</div>
+			{% endfor %}
+
+			</section>
+
+			
+			<p><a class="archive-link" href="{% url 'events-archive' %}">View past events</a></p>
+
+
+		</div>
+
+		<div class="signup-widget large-4 columns" >
+			<!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup">
+				<form action="//lisajamhoury.us4.list-manage.com/subscribe/post?u=09d7dea64fc77bfbab7e4417f&amp;id=6e0c3fe71f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				    <div id="mc_embed_signup_scroll">
+					<h2>Aerial Events in Your Inbox</h2>
+						<p>Sign up to receive a weekly email of upcoming aerial events.</p>
+						<div class="mc-field-group">
+							<input type="text" value="" placeholder="First Name" name="FNAME" class="" id="mce-FNAME">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" value="" placeholder="Last Name" name="LNAME" class="" id="mce-LNAME">
+						</div>
+						<div class="mc-field-group">
+							<input type="email" value="" name="EMAIL" placeholder="Email Address" class="required email" id="mce-EMAIL">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				    	<div style="position: absolute; left: -5000px;"><input type="text" name="b_09d7dea64fc77bfbab7e4417f_6e0c3fe71f" tabindex="-1" value=""></div>
+				    	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+				    </div>
+				    
+				</form>
 			</div>
 
-			<div class="summary-details large-10 columns">
-			<span class="summary-event-name"><a class="summary-title" href="{% url 'event-listing' event.slug %}">{{ event.name|truncatechars:75 }}</a></span>
-			<span class="summary-event-venue">{{ event.venue }}</span>
-			<span class="summary-event-date"> | {{ event.start_date}} 
-			{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %} | <a href="{% url 'event-listing' event.slug %}">Event details</a><br>
-			</div>
-		</div>
-		{% endfor %}
+			<!--End mc_embed_signup-->
 
-	</section>
-
-
-	<section class="event-listings-ongoing">
-
-	<h2>Ongoing Events</h2>
-	{% for event in ongoing_events %}
-	<div class="event-summary {%if forloop.first %}first{%endif%} row collapse">
-		
-		<div class="event-thumbnail large-2 columns">
-			<a href="{% url 'event-listing' event.slug %}">
-				<div class="event-thumbnail-image" style="background-image: url('{{ event.image.url }}')"></div>
-			</a>
 		</div>
 
-		<div class="summary-details large-10 columns">
-		<span class="summary-event-name"><a class="summary-title" href="{% url 'event-listing' event.slug %}">{{ event.name|truncatechars:75 }}</a></span>
-		<span class="summary-event-venue">{{ event.venue }}</span>
-		<span class="summary-event-date"> | <a href="{% url 'event-listing' event.slug %}">Event details</a></span><br>
-		</div>
-	</div>
-	{% endfor %}
-
-	</section>
-
-	
-	<p><a class="archive-link" href="{% url 'events-archive' %}">View past events</a></p>
-
-
-	</div>
 	</div>
 
 
