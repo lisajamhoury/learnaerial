@@ -9416,3 +9416,8 @@ span.summary-event-venue {
 div.mc-field-group input {
   color: #222;
 }
+
+/* line 391, ../scss/app.scss */
+#brooklyn {
+  padding-left: 0;
+}

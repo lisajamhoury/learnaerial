@@ -1,80 +1,108 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block title %}Aerial Venues New York City{% endblock %}
 {% block content %}
 
 
-	<h1>Aerial Venues New York City</h1>
+<h1>Aerial Venues New York City</h1>
 
-	<div class="row">
+<div class="row">
 	<div class="large-8 columns">
-	<p>New York City has no dedicated aerial performance venues, but there are still plenty of great places to see a good aerial show. The venues listed below regularly host aerial shows. Many of the <a href="{% url 'schools' %}">aerial and circus schools</a> and <a href="{% url 'companies' %}">aerial dance companies</a> hold professional and amateur shows as well.</p>
-	</div>
-	</div>
+		<p>New York City has no dedicated aerial performance venues, but there are still plenty of great places to see a good aerial show. The venues listed below regularly host aerial shows. Many of the <a href="{% url 'schools' %}">aerial and circus schools</a> and <a href="{% url 'companies' %}">aerial dance companies</a> hold professional and amateur shows as well.</p>
+		
+		<section id="brooklyn" class="large-6 columns">
+			<h2>Brooklyn</h2>
+			<ul class="no-bullet">
+		
+				<li><h3>House of Yes </h3>
+				Brooklyn, Bushwick <br/>
+				<a href="http://houseofyes.org/" target="_blank">houseofyes.org</a><br/>
+				408 Jefferson St. <br/>
+				Brooklyn, NY 11237
+				</li><br/>
+
+				<li><h3>Galapagos Art Space</h3>
+				Brooklyn, Dumbo <br/>
+				<a href="http://www.galapagosartspace.com/" target="_blank">www.galapagosartspace.com</a><br/>
+				16 Main Street<br/>
+				Brooklyn, New York 11201
+				</li><br/>
+
+			</ul>
+		</section>
+
+		<section id="manhattan" class="large-6 columns">
+			<h2>Manhattan</h2>
+			<ul class="no-bullet">
+				
+				<li><h3>Dixon Place</h3>
+				Manhattan, Lower East Side <br/>
+				<a href="http://dixonplace.org/" target="_blank">dixonplace.org</a><br/>
+				161A Chrystie St. <br/>
+				New York, NY 10002
+				</li><br/>
+
+				<li><h3>NYU Skirball Center for the Performing Arts </h3>
+				Manhattan, Greenwich Village<br/>
+				<a href="http://nyuskirball.org/" target="_blank">nyuskirball.org</a><br/>
+				566 LaGuardia Place<br/>
+				New York, NY 10012.
+				</li><br/>
+
+				<li><h3>Slipper Room </h3>
+				Manhattan, Lower East Side<br/>
+				<a href="http://www.slipperroom.com/" target="_blank">www.slipperroom.com</a><br/>
+				167 Orchard St<br/>
+				New York, NY 10002
+				</li><br/>
+
+				<li><h3>Theater for the New City </h3>
+				Manhattan, Lower East Side<br/>
+				<a href="http://www.theaterforthenewcity.net/" target="_blank">www.theaterforthenewcity.net</a><br/>
+				155 1st Ave<br/>
+				New York, NY 10003
+				</li><br/>
+
+			</ul>
+		</section>
+
+	</div><!-- end large 8 columns -->
+
+	<div class="signup-widget large-4 columns" >
+			<!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup">
+				<form action="//lisajamhoury.us4.list-manage.com/subscribe/post?u=09d7dea64fc77bfbab7e4417f&amp;id=6e0c3fe71f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				    <div id="mc_embed_signup_scroll">
+					<h2>Aerial Events in Your Inbox</h2>
+						<p>Sign up to receive a weekly email of upcoming aerial events.</p>
+						<div class="mc-field-group">
+							<input type="text" value="" placeholder="First Name" name="FNAME" class="" id="mce-FNAME">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" value="" placeholder="Last Name" name="LNAME" class="" id="mce-LNAME">
+						</div>
+						<div class="mc-field-group">
+							<input type="email" value="" name="EMAIL" placeholder="Email Address" class="required email" id="mce-EMAIL">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				    	<div style="position: absolute; left: -5000px;"><input type="text" name="b_09d7dea64fc77bfbab7e4417f_6e0c3fe71f" tabindex="-1" value=""></div>
+				    	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+				    </div>
+				    
+				</form>
+			</div><!--End mc_embed_signup-->
+
+		</div><!-- end 4 column -->
 
 
-	<div class="row three-column">
-	<!-- <h3>Venues</h3> -->
-	<section id="brooklyn" class="large-4 columns">
-		<h2>Brooklyn</h2>
-		<ul class="no-bullet">
-	
-			<li><h3>House of Yes </h3>
-			Brooklyn, Bushwick <br/>
-			<a href="http://houseofyes.org/" target="_blank">houseofyes.org</a><br/>
-			408 Jefferson St. <br/>
-			Brooklyn, NY 11237
-			</li><br/>
 
-			<li><h3>Galapagos Art Space</h3>
-			Brooklyn, Dumbo <br/>
-			<a href="http://www.galapagosartspace.com/" target="_blank">www.galapagosartspace.com</a><br/>
-			16 Main Street<br/>
-			Brooklyn, New York 11201
-			</li><br/>
 
-		</ul>
-	</section>
+</div><!-- end row -->
 
-	<section id="manhattan" class="large-4 columns">
-	<h2>Manhattan</h2>
-		<ul class="no-bullet">
-			
-			<li><h3>Dixon Place</h3>
-			Manhattan, Lower East Side <br/>
-			<a href="http://dixonplace.org/" target="_blank">dixonplace.org</a><br/>
-			161A Chrystie St. <br/>
-			New York, NY 10002
-			</li><br/>
 
-			<li><h3>NYU Skirball Center for the Performing Arts </h3>
-			Manhattan, Greenwich Village<br/>
-			<a href="http://nyuskirball.org/" target="_blank">nyuskirball.org</a><br/>
-			566 LaGuardia Place<br/>
-			New York, NY 10012.
-			</li><br/>
-
-			<li><h3>Slipper Room </h3>
-			Manhattan, Lower East Side<br/>
-			<a href="http://www.slipperroom.com/" target="_blank">www.slipperroom.com</a><br/>
-			167 Orchard St<br/>
-			New York, NY 10002
-			</li><br/>
-
-			<li><h3>Theater for the New City </h3>
-			Manhattan, Lower East Side<br/>
-			<a href="http://www.theaterforthenewcity.net/" target="_blank">www.theaterforthenewcity.net</a><br/>
-			155 1st Ave<br/>
-			New York, NY 10003
-			</li><br/>
-
-		</ul>
-	</section>
-
-	<section class="large-4 columns end">
-		<!-- this section keeps last column from floating right -->
-	</section>
-
-	</div>
 		
 
 
