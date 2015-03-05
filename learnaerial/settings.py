@@ -76,7 +76,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
-    'main.context_processors.get_current_path)',
+    'main.context_processors.get_current_path',
 )
 
 ROOT_URLCONF = 'learnaerial.urls'
