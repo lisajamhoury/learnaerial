@@ -1,7 +1,10 @@
 import datetime
+
+from django.db.models import Q
 from django.contrib.syndication.views import Feed
 from django.core.urlresolvers import reverse
 from django.template.defaultfilters import truncatewords
+
 from events.models import Event
 
 
@@ -13,7 +16,11 @@ class UpcomingEventsFeed(Feed):
     def items(self):
         today = datetime.date.today()
         sixdays = today + datetime.timedelta(days=6)
-        return Event.objects.filter(ongoing=False, published=True, start_date__gte=today, start_date__lte=sixdays).order_by('start_date')
+        return Event.objects.filter(
+            Q(start_date__gte=today, start_date__lte=sixdays) | Q(start_date__lt=today, end_date__gt=today),
+            ongoing=False, # Ongoing false
+            published=True).order_by('start_date')
+
 
     def item_title(self, item):
         return item.name
