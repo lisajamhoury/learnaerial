@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse 
+from django.utils.text import slugify
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFit
 
@@ -37,3 +38,18 @@ class Event(models.Model):
 
 	def get_absolute_url(self):
 		return reverse('event-listing', args=[self.slug]) 
+
+	def save(self, *args, **kwargs):
+		if self.slug == '' or self.slug is None:
+			suffix = 0
+			potential = base = slugify(self.name[:200])
+			while True:
+				if suffix != 0:
+					potential = "-".join([base, str(suffix)])
+				if Event.objects.filter(slug=potential).count() == 0:
+					self.slug = potential
+					break
+				suffix += 1
+		super(Event, self).save(*args, **kwargs)
+
+
