@@ -9,7 +9,7 @@
     <title>{% block title %}{% endblock %} | learnaerial.com</title>
     <meta property="og:title" content="{% block og_title %}{% endblock %} | learnaerial.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Learn Aerial is a hub for aerial artists and appreciators in New York City. It provides listings for aerial schools, venues, companies and events in addition to FAQs for beginner aerial students." />
+    <meta property="og:description" content="{% block og_description %}Learn Aerial is a hub for aerial artists and appreciators in New York City. It provides listings for aerial schools, venues, companies and events in addition to FAQs for beginner aerial students.{% endblock %}" />
     <meta property="og:url" content="{{ current_path }}" />
     <meta property="og:image" content="{% block og_image %}http://learnaerial.com/static/img/learnaerial-social.jpg{% endblock %}" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" />

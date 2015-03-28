@@ -3,6 +3,7 @@
 {% block title %}{{ event.name }}{% endblock %}
 {% block og_title %}{{ event.name }}{% endblock %}
 {% block og_image %}{{ base_url }}{{ event.image.url }}{% endblock %}
+{% block og_description %}{{ event.description|truncatewords:30 }} {% endblock %}
 {% block content %}
 
 
