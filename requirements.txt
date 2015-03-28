@@ -4,3 +4,4 @@ wsgiref==0.1.2
 psycopg2
 pillow
 South
+django-imagekit==3.2.6

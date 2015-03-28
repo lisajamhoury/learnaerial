@@ -1,5 +1,8 @@
 from django.db import models
 from django.core.urlresolvers import reverse 
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFit
+
 
 class Event(models.Model):
 	published = models.BooleanField(default=False)
@@ -15,6 +18,18 @@ class Event(models.Model):
 	price = models.CharField(max_length=500, null=True, blank=True)
 	link = models.CharField(max_length=500, null=True, blank=True)
 	description = models.TextField(null=True, blank=True)
+
+	image_thumbnail = ImageSpecField(source='image',
+                                     processors=[ResizeToFit(300, 300, upscale=False)],
+                                     format='JPEG',
+                                     options={'quality': 85})
+
+	image_feature = ImageSpecField(source='image',
+                                     processors=[ResizeToFit(width=800, upscale=False)],
+                                     format='JPEG',
+                                     options={'quality': 85})
+
+
 
 
 	def __unicode__(self):
