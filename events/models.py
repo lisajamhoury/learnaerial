@@ -26,9 +26,9 @@ class Event(models.Model):
                                      options={'quality': 85})
 
 	image_feature = ImageSpecField(source='image',
-                                     processors=[ResizeToFit(width=800, upscale=False)],
+                                     processors=[ResizeToFit(width=1000, upscale=False)],
                                      format='JPEG',
-                                     options={'quality': 85})
+                                     options={'quality': 100})
 
 
 

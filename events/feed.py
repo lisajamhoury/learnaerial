@@ -18,7 +18,7 @@ class UpcomingEventsFeed(Feed):
         sixdays = today + datetime.timedelta(days=6)
         return Event.objects.filter(
             Q(start_date__gte=today, start_date__lte=sixdays) | Q(start_date__lt=today, end_date__gt=today),
-            ongoing=False, # Ongoing false
+            ongoing=False, 
             published=True).order_by('start_date')
 
 

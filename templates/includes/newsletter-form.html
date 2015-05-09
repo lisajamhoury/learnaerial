@@ -1,0 +1,13 @@
+<div id="mc_embed_signup">
+	<form class="mailchimp" method="post" action="{% url 'newsletter_signup' %}">
+	{% csrf_token %}
+		<h2>Aerial Events in Your Inbox</h2>
+		<p>Sign up to receive a weekly email of upcoming aerial events.</p>
+		<input type="text" value="" placeholder="First Name" name="fname">
+		<input type="text" value="" placeholder="Last Name" name="lname">
+		<input type="email" value="" required="true" name="email" placeholder="Email Address" class="required email">
+		<div id="successMessage" class="alert-box secondary" style="display:none">Thanks for signing up! You'll hear from us soon.</div>
+		<div id="errorMessage" class="alert-box secondary" style="display:none"></div>
+		<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+	</form>
+</div>

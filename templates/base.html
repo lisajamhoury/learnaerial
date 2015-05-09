@@ -14,7 +14,7 @@
     <meta property="og:image" content="{% block og_image %}http://learnaerial.com/static/img/learnaerial-social.jpg{% endblock %}" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" />
     <link rel="stylesheet" href="{% static "css/app.css" %}" />
-    <script src="{% static 'js/modernizr/modernizr.js' %}" o></script>
+    <script src="{% static 'js/modernizr/modernizr.js' %}"></script>
     <meta name="google-site-verification" content="F2F7SHXCT_mUfE1iaUgmdOACwCmN_EO3TZSTNTsl_Es" />
   </head>
 
@@ -86,8 +86,11 @@
 
 <script src="{% static 'js/jquery/dist/jquery.js' %}" ></script>
 <script src="{% static 'js/foundation/js/foundation.min.js' %}" ></script>
+<script src="{% static 'js/app.js' %}"></script>
+
 <script>
   $(document).foundation();
+  NEWSLETTER.initialize();
 </script>
 
 <script>
