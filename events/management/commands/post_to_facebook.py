@@ -10,7 +10,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         graph = facebook.GraphAPI(settings.FACEBOOK_PAGE_TOKEN)
-
+        
         events_to_post = Event.objects.filter(post_to_facebook=True, posted_to_facebook=False)
 
         for event in events_to_post:
