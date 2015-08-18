@@ -392,3 +392,182 @@ div.mc-field-group input {
 	padding-left: 0;
 }
 
+
+// _________
+// _________
+
+// Listings 
+// _________
+// _________
+
+
+
+.meta {
+
+	margin-top: 15px;
+	margin-bottom: 100px;
+
+	div.isa {
+		border-left: solid 1px #ccc;
+	}
+
+
+	div {
+		margin: 0;
+		border-right: solid 1px #ccc;
+  		padding-left: 20px;
+	}
+
+	h2 {
+		font-size: 1.2rem;
+	  	font-style: italic;
+	  	text-transform: none;
+	  	margin-bottom: 20px;
+		
+	}
+
+	label { 
+		font-size: 0.95rem;
+		color: #575757;
+	}
+
+	input[type=checkbox] {
+		border-radius: 2px;
+		border: solid 1px #ccc;
+		width: 18px;
+		height: 18px;
+		text-transform: uppercase;
+		
+		-webkit-appearance:button;
+	    color:#FFF;
+	    white-space: nowrap;
+	    overflow:hidden;
+	    margin: 3px 9px 1rem 0;
+	}
+
+	input[type=checkbox]:checked {
+		background-color: $primary-color;
+	}
+
+	input[type=checkbox], label {
+		float: left;
+	}
+
+	ul {
+		margin-bottom: 0;
+	}
+
+}
+
+.listing {
+	width: 33%;
+	float: left;
+	min-height: 70px;
+	margin-bottom: 50px;
+	line-height: 1.6rem;
+  	font-size: 1rem;
+
+  	h3 {
+  		font-size: 1.2rem;
+  		margin-bottom: .3rem;
+  	}
+
+  	a {
+  		font-style: .8rem;
+  		text-decoration: none;
+  	}
+}
+
+span.category {
+	text-transform: capitalize;
+}
+
+span.category_uncapped {
+	text-transform: none;
+}
+
+.listing-details {
+	float: left;
+	margin-bottom: 30px;
+	padding: 0;
+}
+
+.listing-address {
+	margin-bottom: 30px;
+}
+
+.listing-title {
+
+	span.category {
+		color: #222;
+		font-size: .8rem;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		font-size: 2rem;
+		line-height: 1.4;
+		text-transform: capitalize;
+		
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+}
+
+div.offering {
+	font-style: italic;
+	margin-bottom: 50px;
+
+}
+
+div.update-prompt {
+	float: left;
+	// background-color: #f7f7f7;
+ //  	border: solid 1px #D3D1D1;
+ //  	width: 245px;
+}
+
+.update-prompt h2 {
+	font-size: 1.3rem;
+	margin-bottom: 0;
+}
+
+div#map-canvas {
+	width: 100%;
+	height: 380px;
+}
+
+#email-button {
+	padding-top: 0.7rem;
+	padding-bottom: 0.7rem;
+	width: 158px;
+	border-radius: 3px;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+}
+
+div#listing-lightbox {
+	margin: 70px 70px;
+}
+
+div#listing-single {
+	width: 800px;
+}
+
+#listingModal {
+	top: 130px;
+}
+
+.reveal-modal .close-reveal-modal {
+    color: #7a7a7a;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    position: absolute;
+    top: -6.7rem;
+    text-decoration: none;
+}

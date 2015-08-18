@@ -7,3 +7,4 @@ South
 django-imagekit==3.2.6
 mailchimp
 facebook-sdk
+django-extensions

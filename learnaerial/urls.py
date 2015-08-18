@@ -23,8 +23,8 @@ urlpatterns = patterns('',
     url(r'^events/archive$', 'events.views.events_archive', name='events-archive'),
     url(r'^events/feed$', UpcomingEventsFeed()),
     url(r'^events/(?P<slug>[\w\s,.%&-]+)$', 'events.views.event_listing', name='event-listing'),
-
-
+    url(r'^listings$', 'listings.views.listings', name='listings'),
+    url(r'^listings/(?P<slug>[\w\s,.%&-]+)$', 'listings.views.listing', name='listing')
 
 
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -86,3 +86,140 @@ var NEWSLETTER = {
         $('form.mailchimp').on('submit', NEWSLETTER.submitForm);
     }
 }
+
+var LISTINGS = {
+    initialize: function() {
+        $('a.single-listing').on('click', LISTINGS.showModal);
+        $('#listingModal').on('opened', LISTINGS.loadGoogleMaps);
+    },
+
+    loadGoogleMaps: function() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(40.719393, -73.956388),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          scrollwheel: false,
+          styles: [
+                {
+                    "featureType": "administrative",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#444444"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#f2f2f2"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "lightness": 45
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#6D67B3"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                }
+            ] 
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var geocoder = new google.maps.Geocoder();
+        var address = $('#map-canvas').data('address');
+        geocoder.geocode( { 'address': address}, 
+            function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                  map.setCenter(results[0].geometry.location);
+                  var marker = new google.maps.Marker({
+                      map: map,
+                      position: results[0].geometry.location
+                    });
+                } else {
+                  alert('Geocode was not successful for the following reason: ' + status);
+                }
+        });
+    },
+
+    showModal: function(event) {
+        event.preventDefault();
+        
+        var element = $(this);
+        var listingUrl = element.attr('href');
+       
+        $('#listingModal').foundation('reveal', 'open', {
+            url: listingUrl,
+        });
+
+    },
+
+
+
+
+}

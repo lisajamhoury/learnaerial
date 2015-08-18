@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{% static "css/app.css" %}" />
     <script src="{% static 'js/modernizr/modernizr.js' %}"></script>
     <meta name="google-site-verification" content="F2F7SHXCT_mUfE1iaUgmdOACwCmN_EO3TZSTNTsl_Es" />
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
 
 <body>
@@ -85,12 +86,15 @@
 </div>
 
 <script src="{% static 'js/jquery/dist/jquery.js' %}" ></script>
-<script src="{% static 'js/foundation/js/foundation.min.js' %}" ></script>
+<script src="{% static 'js/foundation/js/foundation.js' %}" ></script>
 <script src="{% static 'js/app.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/listings.js' %}"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.min.js"></script>
 
 <script>
   $(document).foundation();
   NEWSLETTER.initialize();
+  LISTINGS.initialize();
 </script>
 
 <script>
@@ -109,15 +113,16 @@
     $('#mobile-nav-links').toggle();
   }); 
   
-  // L33T stuff to clear the form fields
   $('#mc-embedded-subscribe-form').on('submit', function(event){
     setTimeout(function() {
       $('#mc-embedded-subscribe-form').find("input[type=text], input[type=email]").val('');
     }, 200);
   });
   
-  // Lisa is L33t. Just in case you were wondering.          
+  {% block initScripts %}{% endblock %}
 </script>
+
+
 
 
 </body>
