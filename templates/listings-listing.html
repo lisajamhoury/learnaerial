@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}{{ listing.name }}{% endblock %}
+{% block og_title %}{{ listing.name }}{% endblock %}
+
+
+{% block content %}	
+
+<div id="listing-single">
+	
+{% include "includes/listing-entry.html" %}
+
+</div>
+
+{% endblock %}
+
+{% block initScripts %}
+
+LISTINGS.loadGoogleMaps();
+
+{% endblock %}
