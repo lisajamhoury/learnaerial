@@ -26,6 +26,7 @@ def listings(request):
 	context['categories'] = categories
 	context['offerings'] = offerings
 	context['cities'] = cities
+	context['current_page'] = 'listings'
 
 	return render(request, 'listings.html', context)
 
@@ -36,6 +37,7 @@ def listing(request, slug):
 
 	context = {}
 	context['listing'] = listing 
+	context['current_page'] = 'listings_listing'
 
 	if request.is_ajax():
 		template_name = 'listing-modal.html'

@@ -14,40 +14,42 @@ var GRID = {
 	updateFilters: function(event) {
 		event.preventDefault();
 
-		// var checked = $('input[type=checkbox]:checked');
-
 		// Using similar code as above get all checked inside categories
-		// var checkedCategories = $(................................);
+		var checkedCategories = $('.categories input[type=checkbox]:checked');
 
 		// Using similar code as above get all checked inside offerings
-		// var checkedOfferings = $(......................................);
+		var checkedOfferings = $('.offerings input[type=checkbox]:checked');
 
 		// Using similar code as above get all checked inside cities
-		// var checkedCities = $(.......................................);
+		var checkedCities = $('.location input[type=checkbox]:checked');
+
+		console.log(checkedCategories);
+		console.log(checkedOfferings);
+		console.log(checkedCities);
 
 		// Get the filter names for each group of checked checkboxes
 
-		// var categoriesFilterList = GRID.getFilterListFromChecked(checkedCategories);
-		// var offeringsFilterList = GRID.getFilterListFromChecked(checkedOfferings);
-		// var citiesFilterList = GRID.getFilterListFromChecked(checkedCities);
+		var categoriesFilterList = GRID.getFilterListFromChecked(checkedCategories);
+		var offeringsFilterList = GRID.getFilterListFromChecked(checkedOfferings);
+		var citiesFilterList = GRID.getFilterListFromChecked(checkedCities);
 
+		console.log(categoriesFilterList);
+		console.log(offeringsFilterList);
+		console.log(citiesFilterList);
 
-		// NOOOOOOW here is the hard bit
-		// We need every possible combination of each of the items in all three arrays above
-		// Soooo let's say we ahve
-		// ['.taco', '.burrito']  AND we have ['.spicy', '.mild'] AND ['.small', '.large']
-		// We need to turn it into:
-		// ['.taco.spicy.small', '.taco.spicy.large', '.taco.mild.small', '.taco.mild.large', '.burrito.spicy.small', ..... ETC ETC ETC ... ]
-		// Sooo most people recommend using recursion for that, but it might be a bit too complicated for you to grasp
-		// (see http://stackoverflow.com/questions/4331092/finding-all-combinations-of-javascript-array-values)
+		var allFilterList = categoriesFilterList.concat(offeringsFilterList, citiesFilterList);
 
-		// Imma stop here because I need to do work now ... but hopefully you can get a bit further.
+		var allFilters = allFilterList.join('');
+		
+		console.log(allFilters);
+		GRID.grid.isotope({ filter: allFilters });
+
 	},
 
 	getFilterListFromChecked: function(checked) {
 		// This function accepts an array of input boxes, and returns an array of strings
 		// that correspond to the filter that will be used in Isotope
-		// Given an list of inputs like this:
+		// Given a list of inputs like this:
 		// [<input type="checkbox" data-filter-group="city" data-filter-slug="new-york">, [<input type="checkbox" data-filter-group="city" data-filter-slug="frenchtown">,]
 		// We return:
 		// ['.city-new-york', '.city-frenchtown']
@@ -60,11 +62,16 @@ var GRID = {
 		var filterList = [];
 
 		// Now start your LOOP here
-		{
-			// Inside your loop, you push first make the string
-			// var filter = '.' + $() + '-' + $() // Jquery Magic to get the value for data-filter-group and value for data-filter-slug hint: https://api.jquery.com/jquery.data/
-			// filterList.push(filter) // here filter should look something like '.city-new-york'
-		}
+		$.each(checked, function( index, value ) {
+			console.log('loooooooooooooooooooooooooooop');
+
+			// Inside your loop, you first make the string
+			var filter = '.' + $(value).data('filter-group') + '-' + $(value).data('filter-slug');
+			console.log(filter);
+			 // Jquery Magic to get the value for data-filter-group and value for data-filter-slug hint: https://api.jquery.com/jquery.data/
+
+			filterList.push(filter);
+		});
 
 		return filterList
 

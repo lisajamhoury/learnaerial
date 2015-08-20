@@ -1,6 +1,7 @@
 	<div class="listing-title">
 		<span class="category">{% for category in listing.categories.all %}{{ category.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</span><br/>  
-		{% if modal %}<a href="{% url 'listing' listing.slug %}">{% endif %}<h1>{{ listing.name }}</h1>{% if modal %}</a>{% endif %}
+		{% if modal %}<a href="{% url 'listing' listing.slug %}">{% endif %}<h1>{{ listing.name }}</h1>{% if modal %}</a>{% endif %}{% if modal %}<a id="close-x" class="close-reveal-modal" aria-label="Close">×</a>{% endif %}
+		
 	</div>	
 				
 	<div class="large-8 columns listing-details">  	
@@ -17,9 +18,7 @@
 		</div>
 	</div>
 
-	<div class="large-4 columns update-prompt">
-		{% if modal %}<a class="close-reveal-modal" aria-label="Close">×</a>{% endif %}
-		{% if modal %}<div class="permalink"><a href="{% url 'listing' listing.slug %}">Listing permalink</a></div>{% endif %}
+	<div class="large-4 columns update-prompt {% if modal %}update-prompt-modal{% endif %}">
 		<h2>Does this need updating?</h2><br/>
 		<a class="button" id="email-button" href="mailto:lisa@learnaerial.com?subject=Update needed for {{ listing.name }}">Let us know</a>
 		
@@ -28,3 +27,10 @@
 	<div class="clearfix"></div>
 
 	<div id="map-canvas" data-address="{{ listing.address_1 }}, {{ listing.city }} {{ listing.state }} {{ listing.zipcode }}"></div>
+
+	<div class="update-prompt-below">
+		Does this listing need updating? <a href="mailto:lisa@learnaerial.com?subject=Update needed for {{ listing.name }}">Let us know.</a>
+		
+	</div>
+
+	{% if modal %}<div class="permalink"><a href="{% url 'listing' listing.slug %}">Listing permalink</a></div>{% endif %}
