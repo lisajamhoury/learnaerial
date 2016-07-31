@@ -34,7 +34,7 @@ def event_listing(request, slug):
 
 def events_archive(request):
 	now = datetime.datetime.now()
-	events_archive = Event.objects.filter(Q(end_date__lt=now) | Q(end_date__isnull=True), start_date__lt=now, ongoing=False).order_by('-start_date')[:100]
+	events_archive = Event.objects.filter(Q(end_date__lt=now) | Q(end_date__isnull=True), start_date__lt=now, ongoing=False).order_by('-start_date')[:50]
 
 	context = {}
 	context['current_page'] = 'events'
