@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title %}{{ listing.name }}{% endblock %}
-{% block og_title %}{{ listing.name }}{% endblock %}
+{% block title %}{{ listing.name }}, {{ listing.neighborhood }}, {{ listing.city }}, {{ listing.state }}{% endblock %}
+{% block og_title %}{{ listing.name }}, {{ listing.neighborhood }}, {{ listing.city }}, {{ listing.state }}{% endblock %}
 
 
 {% block content %}	
