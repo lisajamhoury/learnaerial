@@ -44,4 +44,11 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+
 /media
+
+
+*.css.map
+
+
+
