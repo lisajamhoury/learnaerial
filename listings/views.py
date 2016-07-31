@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+
 from listings.models import Listing 
 from listings.models import Category
 from listings.models import Offering
@@ -32,7 +35,10 @@ def listings(request):
 
 
 def listing(request, slug):
-	listing = Listing.objects.get(slug=slug)
+	try:
+		listing = Listing.objects.get(slug=slug)
+	except Listing.DoesNotExist: 
+		return HttpResponseRedirect(reverse('listings'))
 	template_name = 'listings-listing.html'
 
 	context = {}

@@ -2,6 +2,9 @@ import datetime
 
 from django.shortcuts import render
 from django.db.models import Q
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+
 from events.models import Event
 
 
@@ -20,12 +23,13 @@ def events(request):
 	context['current_page'] = 'events'
 	context['ongoing_events'] = ongoing_events
 
-
 	return render(request, 'events.html', context)
 
 def event_listing(request, slug):
-	event = Event.objects.get(slug=slug)
-
+	try:
+		event = Event.objects.get(slug=slug)
+	except Event.DoesNotExist:
+		return HttpResponseRedirect(reverse('events'))
 	context = {}
 	context['event'] = event
 	context['current_page'] = 'event_listing'
