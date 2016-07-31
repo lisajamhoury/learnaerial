@@ -81,6 +81,12 @@ def newsletter_signup(request):
 
 		return HttpResponse(json.dumps(response), content_type='application/json')
 
+def faq(request):
+	context = {}
+	context['current_page'] = 'faq'
+
+	return render(request, 'faq.html', context)
+
 
 
 

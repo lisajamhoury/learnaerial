@@ -27,10 +27,10 @@
     <a href="{% url 'home' %}"><img src="{% static "img/learn-aerial-logo-440.gif" %}" alt="Learn Aerial Logo" height="36px" width="220px"></a>
     <a class="menu-icon right " id="hamburger"><span></span></a>
     <ul id="mobile-nav-links">
-      <li {% if current_page == 'about' %} class="active" {% endif %}><a href="{% url 'about' %}">About</a></li>
       <li {% if current_page == 'listings_listing' or current_page == 'listings' %} class="active" {% endif %}><a href="{% url 'listings' %}">Listings</a></li>
       <li {% if current_page == 'event_listing' or current_page == 'events' %} class="active" {% endif %}><a href="{% url 'events' %}">Events</a></li>
       <li {% if current_page == 'equipment' %} class="active" {% endif %}><a href="{% url 'equipment' %}">Equipment</a></li>
+      <li {% if current_page == 'faq' %} class="active" {% endif %}><a href="{% url 'faq' %}">FAQ</a></li>
     </ul>
   </div>
 </nav>
@@ -46,10 +46,10 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li {% if current_page == 'about' %} class="active" {% endif %}><a href="{% url 'about' %}">About</a></li>
       <li {% if current_page == 'listings_listing' or current_page == 'listings' %} class="active" {% endif %}><a href="{% url 'listings' %}">Listings</a></li>
       <li {% if current_page == 'event_listing' or current_page == 'events' %} class="active" {% endif %}><a href="{% url 'events' %}">Events</a></li>
       <li {% if current_page == 'equipment' %} class="active" {% endif %}><a href="{% url 'equipment' %}">Equipment</a></li>
+      <li {% if current_page == 'faq' %} class="active" {% endif %}><a href="{% url 'faq' %}">FAQ</a></li>
     </ul>
   </section>
   </div>
@@ -74,8 +74,9 @@
     </div>
     <div class="footer-bottom small-4 columns right">
       <ul class="footer-contact no-bullet small">
-              <li><a class="gray" href="mailto:learnaerial@gmail.com">Contact</a></li>
-          </ul>    
+        <li><a class="gray" href="mailto:learnaerial@gmail.com">Contact</a></li>      
+        <li><a class="gray" href="{% url 'about' %}">About</a></li>
+      </ul>    
     </div>
   </footer>  
 </div>
