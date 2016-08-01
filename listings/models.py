@@ -70,7 +70,7 @@ class Listing(models.Model):
 	slug = AutoSlugField(max_length=50, unique=True, populate_from='name')
 	image = models.ImageField(null=True, blank=True, upload_to='listings')
 	website = models.CharField(max_length=500, null=True, blank=True)
-	neighborhood = models.ForeignKey(Neighborhood, null=True)
+	neighborhood = models.ForeignKey(Neighborhood, null=True, blank=True)
 	address_1 = models.CharField(max_length=500, null=True, blank=True)
 	address_2 = models.CharField(max_length=500, null=True, blank=True)
 	city = models.ForeignKey(City, null=True)
