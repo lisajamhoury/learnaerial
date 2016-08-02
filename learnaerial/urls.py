@@ -24,6 +24,8 @@ urlpatterns = patterns('',
     url(r'^events/feed$', UpcomingEventsFeed()),
     url(r'^events/(?P<slug>[\w\s,.%&-]+)$', 'events.views.event_listing', name='event-listing'),
     url(r'^listings$', 'listings.views.listings', name='listings'),
+    url(r'^listings/newyorkcity$', 'listings.views.listings_nyc', name='listings-nyc'),
+    url(r'^listings/sanfrancisco$', 'listings.views.listings_sf', name='listings-sf'),
     url(r'^listings/(?P<slug>[\w\s,.%&-]+)$', 'listings.views.listing', name='listing'),
     url(r'^faq$', 'main.views.faq', name='faq')
     # url(r'^places$', 'listings.views.listings', name='places'),

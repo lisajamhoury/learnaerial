@@ -6,16 +6,6 @@ from django.core.urlresolvers import reverse
 from django_extensions.db.fields import AutoSlugField
 
 
-class City(models.Model):
-	name = models.CharField(max_length=200)
-	slug = AutoSlugField(max_length=50, unique=True, populate_from='name')
-	class Meta:
-		verbose_name_plural = "Cities"
-
-	def __unicode__(self):
-		return self.name
-
-
 class State(models.Model):
 	name = models.CharField(max_length=200)
 	slug = AutoSlugField(max_length=50, unique=True, populate_from='name')
@@ -33,6 +23,16 @@ class Country(models.Model):
 	def __unicode__(self):
 		return self.name
 
+
+class City(models.Model):
+	name = models.CharField(max_length=200)
+	slug = AutoSlugField(max_length=50, unique=True, populate_from='name')
+	state = models.ForeignKey(State, null=True)
+	class Meta:
+		verbose_name_plural = "Cities"
+
+	def __unicode__(self):
+		return self.name
 
 
 class Neighborhood(models.Model):
@@ -66,7 +66,7 @@ class Offering(models.Model):
 
 class Listing(models.Model): 
 	published = models.BooleanField(default=False)
-	name= models.CharField(max_length=500)
+	name = models.CharField(max_length=500)
 	slug = AutoSlugField(max_length=50, unique=True, populate_from='name')
 	image = models.ImageField(null=True, blank=True, upload_to='listings')
 	website = models.CharField(max_length=500, null=True, blank=True)
