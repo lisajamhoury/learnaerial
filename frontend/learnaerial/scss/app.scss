@@ -567,6 +567,24 @@ div#listing-single {
 	margin-bottom: 10px;
 }
 
+
+span.show-hide {
+  font-size: 0.9em;
+  color: #522387;
+  cursor: pointer;
+  margin-left: 2.4em;
+  font-style: italic;
+}
+
+div#moreofferings {
+	display: none;
+}
+
+div.internal-offerings {
+	border: none;
+}
+
+
 // Media Queries
 
 //For small screens 

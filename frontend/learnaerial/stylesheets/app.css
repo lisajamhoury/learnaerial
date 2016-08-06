@@ -23946,71 +23946,90 @@ div#listing-single {
   margin-bottom: 10px;
 }
 
+/* line 571, ../scss/app.scss */
+span.show-hide {
+  font-size: 0.9em;
+  color: #522387;
+  cursor: pointer;
+  margin-left: 2.4em;
+  font-style: italic;
+}
+
+/* line 579, ../scss/app.scss */
+div#moreofferings {
+  display: none;
+}
+
+/* line 583, ../scss/app.scss */
+div.internal-offerings {
+  border: none;
+}
+
 @media only screen and (max-width: 40em) {
-  /* line 575, ../scss/app.scss */
+  /* line 593, ../scss/app.scss */
   #home-splash {
     padding-top: 100px;
   }
-  /* line 577, ../scss/app.scss */
+  /* line 595, ../scss/app.scss */
   #home-splash p {
     font-size: 18px;
   }
 
-  /* line 582, ../scss/app.scss */
+  /* line 600, ../scss/app.scss */
   li.listing {
     width: 100%;
     margin-bottom: 35px;
   }
 
-  /* line 587, ../scss/app.scss */
+  /* line 605, ../scss/app.scss */
   .meta {
     margin-bottom: 20px;
   }
 
-  /* line 591, ../scss/app.scss */
+  /* line 609, ../scss/app.scss */
   .meta div.isa {
     border-left: none;
   }
 
-  /* line 595, ../scss/app.scss */
+  /* line 613, ../scss/app.scss */
   .meta div {
     margin-bottom: 20px;
   }
 
-  /* line 599, ../scss/app.scss */
+  /* line 617, ../scss/app.scss */
   div#listing-lightbox {
     margin: 0px 0px;
   }
 
-  /* line 603, ../scss/app.scss */
+  /* line 621, ../scss/app.scss */
   a#close-x {
     right: 2rem;
     top: 1.5rem;
   }
 
-  /* line 608, ../scss/app.scss */
+  /* line 626, ../scss/app.scss */
   div.offering {
     margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 64em) {
-  /* line 617, ../scss/app.scss */
+  /* line 635, ../scss/app.scss */
   .update-prompt {
     display: none;
   }
 
-  /* line 621, ../scss/app.scss */
+  /* line 639, ../scss/app.scss */
   .meta div.isa {
     border-left: none;
   }
 
-  /* line 625, ../scss/app.scss */
+  /* line 643, ../scss/app.scss */
   .meta div {
     border-right: none;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 633, ../scss/app.scss */
+  /* line 651, ../scss/app.scss */
   .update-prompt-below {
     display: none;
   }

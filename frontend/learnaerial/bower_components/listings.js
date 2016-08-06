@@ -9,6 +9,27 @@ var GRID = {
 
     //when checkbox clicked, we update filters
     checkboxes.on('change', GRID.updateFilters);
+
+    //show and hide more offerings 
+    var showMore = $('#showmore');
+    var showLess = $('#showless');
+    var hideOnLoad = $('#moreofferings');
+    console.log('loading show hide');
+
+
+    showMore.click(function() {
+      console.log('show more');
+      hideOnLoad.show();
+      showLess.show();
+      showMore.hide();
+    });
+
+    showLess.click(function() {
+      console.log('showless');
+      hideOnLoad.hide();
+      showLess.hide();
+      showMore.show();
+    });
   },
 
   updateFilters: function(event) {

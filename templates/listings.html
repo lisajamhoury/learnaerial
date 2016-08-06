@@ -25,12 +25,24 @@
 		<div class="large-4 columns">
 			<h2>Offers...</h2>
 			<ul class="no-bullet offerings">
-				{% for offering in offerings %}
-				<li class="clearfix">
-					<input type="checkbox" data-filter-group="offering" data-filter-slug="{{ offering.slug }}" id="checkbox-offering-{{ offering.slug }}"/>
-					<label for="checkbox-offering-{{ offering.slug }}">{{ offering.name }}</label>
-				</li>
-				{% endfor %}
+				<div class="internal-offerings" id="initialofferings" >
+					{% for offering in offerings|slice:":3" %}
+					<li class="clearfix">
+						<input type="checkbox" data-filter-group="offering" data-filter-slug="{{ offering.slug }}" id="checkbox-offering-{{ offering.slug }}"/>
+						<label for="checkbox-offering-{{ offering.slug }}">{{ offering.name }}</label>
+					</li>
+					{% endfor %}
+					<span class="show-hide" id="showmore">show more</span>
+				</div>
+				<div class="internal-offerings" id="moreofferings">
+					{% for offering in offerings|slice:"3:" %}
+					<li class="clearfix">
+						<input type="checkbox" data-filter-group="offering" data-filter-slug="{{ offering.slug }}" id="checkbox-offering-{{ offering.slug }}"/>
+						<label for="checkbox-offering-{{ offering.slug }}">{{ offering.name }}</label>
+					</li>
+					{% endfor %}
+					<span class="show-hide" id="showless">show less</span>
+				</div>
 			</ul>	
 		</div>
 
