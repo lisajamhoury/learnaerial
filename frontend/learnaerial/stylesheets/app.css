@@ -23956,12 +23956,12 @@ span.show-hide {
 }
 
 /* line 579, ../scss/app.scss */
-div#moreofferings {
+div.more-filters {
   display: none;
 }
 
 /* line 583, ../scss/app.scss */
-div.internal-offerings {
+div.internal-filters {
   border: none;
 }
 

@@ -10,25 +10,25 @@ var GRID = {
     //when checkbox clicked, we update filters
     checkboxes.on('change', GRID.updateFilters);
 
-    //show and hide more offerings 
-    var showMore = $('#showmore');
-    var showLess = $('#showless');
-    var hideOnLoad = $('#moreofferings');
-    console.log('loading show hide');
+    //show and hide more filters 
+    var showMore = $('.showmore');
+    var showLess = $('.showless');
+    var parent = null;
 
-
-    showMore.click(function() {
-      console.log('show more');
-      hideOnLoad.show();
-      showLess.show();
-      showMore.hide();
+    showMore.click(function(event) {
+      event.preventDefault();
+      parent = $(this).parents('ul');
+      parent.find('.showmore').hide();
+      parent.find('.more-filters').show();
     });
 
-    showLess.click(function() {
-      console.log('showless');
-      hideOnLoad.hide();
-      showLess.hide();
-      showMore.show();
+    showLess.click(function(event) {
+      event.preventDefault();
+      parent = $(this).parents('ul');
+      parent.find('.more-filters').hide();
+      parent.find('.showmore').show();
+
+
     });
   },
 

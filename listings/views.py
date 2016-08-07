@@ -7,10 +7,15 @@ from listings.models import Category
 from listings.models import Offering
 from listings.models import City 
 from listings.models import State
+from listings.models import MetroArea
 
 def listings(request):
 	listings = Listing.objects\
 		.filter(published=True)\
+		.order_by('name')
+
+	metroareas = MetroArea.objects\
+		.all()\
 		.order_by('name')
 
 	categories = Category.objects\
@@ -27,6 +32,7 @@ def listings(request):
 
 	context = {}
 	context['listings'] = listings
+	context['metroareas'] = metroareas
 	context['categories'] = categories
 	context['offerings'] = offerings
 	context['cities'] = cities
@@ -50,7 +56,41 @@ def listing(request, slug):
 		template_name = 'listing-modal.html'
 		context['modal'] = True
 
-	return render(request, template_name, context)	
+	return render(request, template_name, context)
+
+def listings_metro_area(request, slug):
+	try:
+		metro_area = MetroArea.objects.get(slug=slug)
+	except MetroArea.DoesNotExist:
+		return HttpResponseRedirect(reverse('listings'))
+	template_name = 'listings-metro-area.html'
+
+	listings = Listing.objects\
+		.filter(published=True, city__metroarea=metro_area)\
+		.order_by('name')
+
+	categories = Category.objects\
+		.all()\
+		.order_by('name')
+
+	offerings = Offering.objects\
+		.all()\
+		.order_by('name')
+
+	cities = City.objects\
+		.filter(metroarea=metro_area)\
+		.order_by('name')
+
+	context = {}
+	context['metro_area'] = metro_area
+	context['listings'] = listings
+	context['categories'] = categories
+	context['offerings'] = offerings
+	context['cities'] = cities
+	context['current_page'] = 'listings'
+
+	return render(request, 'listings-metro-area.html', context)	
+
 
 def listings_nyc(request):
 	listings_nyc = Listing.objects\

@@ -23,11 +23,22 @@ class Country(models.Model):
 	def __unicode__(self):
 		return self.name
 
+class MetroArea(models.Model): 
+	name = models.CharField(max_length=200)
+	slug = AutoSlugField(max_length=50, unique=True, populate_from='name')
+	state = models.ForeignKey(State)
+	class Meta:
+		verbose_name_plural = "MetroAreas"
+
+	def __unicode__(self):
+		return self.name 
 
 class City(models.Model):
 	name = models.CharField(max_length=200)
 	slug = AutoSlugField(max_length=50, unique=True, populate_from='name')
 	state = models.ForeignKey(State, null=True)
+	metroarea = models.ForeignKey(MetroArea, null=True)
+	
 	class Meta:
 		verbose_name_plural = "Cities"
 
@@ -42,7 +53,6 @@ class Neighborhood(models.Model):
 
 	def __unicode__(self):
 		return self.name
-
 
 class Category(models.Model):
 	name = models.CharField(max_length=200)

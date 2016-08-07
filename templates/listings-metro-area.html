@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title %}Aerial School, Venue and Company Listings{% endblock %}
-{% block og_title %}Aerial School, Venue and Company Listings{% endblock %}
+{% block title %}Aerial School, Venue and Company Listings in {{ metro_area.name }}{% endblock %}
+{% block og_title %}Aerial School, Venue and Company Listings in {{ metro_area.name }}{% endblock %}
 {% block content %}
 
 
-<h1>Aerial Schools, Venues and Companies</h1>
+<h1>Aerial Schools, Venues and Companies in {{ metro_area.name }}</h1>
+<a class="events-back" href="{% url 'listings' %}">< Back to all listings</a><br/><br/>
 
 <div class="row">
 	<section class="large-12 columns meta">
@@ -66,19 +67,21 @@
 			<h2>Located in...</h2>
 			<ul class="no-bullet location">
 				<div class="internal-filters initial-filters" id="initiallocations" >
-					{% for metroarea in metroareas|slice:":3" %}
+					{% for city in cities|slice:":3" %}
 					<li class="clearfix">
-						<a href="{% url 'listings_metro_area' metroarea.slug %}">{{ metroarea.name }}</a>
-						</li>
+						<input type="checkbox" data-filter-group="city" data-filter-slug="{{ city.slug }}" id="checkbox-city-{{ city.slug }}"/>
+						<label for="checkbox-city-{{ city.slug }}">{{ city.name }}</label>
+					</li>
 					{% endfor %}
-					{% if metro_area.count > 3 %}
+					{% if cities.count > 3 %}
 						<span class="show-hide showmore">show more</span>
 					{% endif %}
 				</div>
 				<div class="internal-filters more-filters" id="morelocations">
-					{% for metroarea in metroareas|slice:"3:" %}
+					{% for city in cities|slice:"3:" %}
 					<li class="clearfix">
-						<a href="{% url 'listings_metro_area' metro_area.slug %}">{{ metro_area.name }}</a>
+						<input type="checkbox" data-filter-group="city" data-filter-slug="{{ city.slug }}" id="checkbox-city-{{ city.slug }}"/>
+						<label for="checkbox-city-{{ city.slug }}">{{ city.name }}</label>
 					</li>
 					{% endfor %}
 					<span class="show-hide showless">show less</span>
