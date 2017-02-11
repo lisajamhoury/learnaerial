@@ -89,7 +89,7 @@ class Listing(models.Model):
 	country = models.ForeignKey(Country, null=True)
 	description = models.TextField(null=True, blank=True)
 	categories = models.ManyToManyField(Category)
-	offerings = models.ManyToManyField(Offering, null=True)
+	offerings = models.ManyToManyField(Offering)
 
 	def __unicode__(self):
 		return self.name

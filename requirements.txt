@@ -1,10 +1,9 @@
-Django==1.7.7
-wsgiref==0.1.2
+Django==1.10.5
+wsgiref
 
 psycopg2
 pillow
-South
-django-imagekit==3.2.6
+django-imagekit==3.3
 mailchimp
 facebook-sdk
 django-extensions

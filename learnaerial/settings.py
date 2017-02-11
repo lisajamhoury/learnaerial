@@ -39,7 +39,7 @@ if ENVIRONMENT == 'develop':
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['learnaerial.com']
+ALLOWED_HOSTS = ['learnaerial.com', '127.0.0.1']
 
 
 # Application definition
@@ -68,17 +68,30 @@ MIDDLEWARE_CLASSES = (
 )
 
 
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.media',
-    'django.core.context_processors.static',
-    'django.core.context_processors.tz',
-    'django.contrib.messages.context_processors.messages',
-    'main.context_processors.get_current_path',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            # insert your TEMPLATE_DIRS here
+            BASE_DIR + '/templates',
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                # list if you haven't customized them:
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.contrib.messages.context_processors.messages',
+                'main.context_processors.get_current_path',
+            ],
+        },
+    },
+]
 
 ROOT_URLCONF = 'learnaerial.urls'
 
@@ -125,10 +138,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
-
-TEMPLATE_DIRS = (
-    BASE_DIR + '/templates',
-)
 
 STATICFILES_DIRS = (
     BASE_DIR + '/assets',
