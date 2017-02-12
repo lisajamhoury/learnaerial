@@ -1,0 +1,16 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="large-12 columns">
+    {% for post in posts %}
+      <div class="medium-6 small-12 large-4 columns {% if forloop.last %}end{% endif %}">
+        {{ post.title }}
+        <a href="{{ post.get_absolute_url }}">Read</a><br>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

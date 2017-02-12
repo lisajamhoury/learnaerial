@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="large-12 columns">
+
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-8 columns">
+
+    {% block main %}
+    {% endblock %}
+
+  </div>
+
+  <div class="large-4 columns">
+    {% block side %}
+
+      {% include "includes/newsletter-form.html" %}
+
+      <hr>
+      <h2>Categories</h2>
+      {% for category in categories %}
+        <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+      {% endfor %}
+    {% endblock %}
+  </div>
+</div>
+{% endblock %}

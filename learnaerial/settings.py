@@ -18,7 +18,7 @@ BASE_WEBFACTION_DIR = os.path.dirname(os.path.dirname(BASE_DIR))
 try:
     from learnaerial.environment import ENVIRONMENT
 except ImportError:
-    ENVIRONMENT='production'
+    ENVIRONMENT = 'production'
 
 try:
     from learnaerial.db_settings import DB_PASSWORD
@@ -37,7 +37,6 @@ DEBUG = False
 if ENVIRONMENT == 'develop':
     DEBUG = True
 
-TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['learnaerial.com', '127.0.0.1']
 
@@ -51,11 +50,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'imagekit',
     'main',
     'events',
     'listings',
-
+    'blog',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'learnaerial.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 DATABASES = {
     'default':{
-       'NAME':'learnaerial',
+       'NAME': 'learnaerial',
        'USER': 'learnaerial',
        'PASSWORD': DB_PASSWORD,
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -112,8 +112,8 @@ DATABASES = {
 
 if ENVIRONMENT == 'develop':
     DATABASES = {
-        'default':{
-           'NAME':'learnaerial',
+        'default': {
+           'NAME': 'learnaerial',
            'ENGINE': 'django.db.backends.postgresql_psycopg2',
        }
     }
@@ -146,6 +146,10 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = BASE_WEBFACTION_DIR + '/learnaerial_media'
 STATIC_ROOT = BASE_WEBFACTION_DIR + '/learnaerial_static'
 
+if ENVIRONMENT == 'develop':
+    MEDIA_ROOT = BASE_DIR + '/learnaerial_media'
+    STATIC_ROOT = BASE_DIR + '/learnaerial_static'
+
 
 MAILCHIMP_API_KEY = '3477524f7215966259c95cd4b96bb3eb-us4'
 
@@ -156,5 +160,3 @@ FACEBOOK_PAGE_TOKEN = 'CAAFXt1aHkSsBABXWIBE7BzJCLoFZBhsJJqSOZAcTPFz5UjPGOZC7QJWN
 
 SITE_DOMAIN = 'learnaerial.com'
 SITE_URL = 'http://%s' % SITE_DOMAIN
-
-

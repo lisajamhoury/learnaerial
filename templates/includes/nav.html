@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+<div class="row">
+  <nav class="hide-for-large-up" id="mobile-nav">
+    <div class="inner clearfix ">
+      <a href="{% url 'home' %}"><img src="{% static "img/learn-aerial-logo-440.gif" %}" alt="Learn Aerial Logo" height="36px" width="220px"></a>
+      <a class="menu-icon right " id="hamburger"><span></span></a>
+      <ul id="mobile-nav-links">
+        <li {% if current_page == 'listings_listing' or current_page == 'listings' %} class="active" {% endif %}><a href="{% url 'listings' %}">Listings</a></li>
+        <li {% if current_page == 'event_listing' or current_page == 'events' %} class="active" {% endif %}><a href="{% url 'events' %}">Events</a></li>
+        <li {% if current_page == 'equipment' %} class="active" {% endif %}><a href="{% url 'equipment' %}">Equipment</a></li>
+        <li {% if current_page == 'faq' %} class="active" {% endif %}><a href="{% url 'faq' %}">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="top-bar large-12 columns show-for-large-up">
+  <div class="inner clearfix">
+    <ul class="title-area">
+      <li class="name">
+       <a href="{% url 'home' %}"><img src="{% static "img/learn-aerial-logo-440.gif" %}" alt="Learn Aerial Logo" height="36px" width="220px"></a>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li {% if current_page == 'listings_listing' or current_page == 'listings' %} class="active" {% endif %}><a href="{% url 'listings' %}">Listings</a></li>
+        <li {% if current_page == 'event_listing' or current_page == 'events' %} class="active" {% endif %}><a href="{% url 'events' %}">Events</a></li>
+        <li {% if current_page == 'equipment' %} class="active" {% endif %}><a href="{% url 'equipment' %}">Equipment</a></li>
+        <li {% if current_page == 'faq' %} class="active" {% endif %}><a href="{% url 'faq' %}">FAQ</a></li>
+      </ul>
+    </section>
+    </div>
+  </nav>
+</div>
+

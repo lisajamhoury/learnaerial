@@ -1,0 +1,11 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block main %}
+  <h1>{{ category.name }}</h1>
+
+  {% for post in posts %}
+  <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+  {% endfor %}
+{% endblock %}
