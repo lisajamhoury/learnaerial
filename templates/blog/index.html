@@ -6,11 +6,23 @@
 <div class="row">
   <div class="large-12 columns">
     {% for post in posts %}
-      <div class="medium-6 small-12 large-4 columns {% if forloop.last %}end{% endif %}">
-        {{ post.title }}
-        <a href="{{ post.get_absolute_url }}">Read</a><br>
-      </div>
+    	<div class="post-thumbnail medium-6 small-12 large-6 columns {% if forloop.last %}end{% endif %}">
+				<h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+				<a href="{{ post.get_absolute_url }}">
+					<div class="post-thumbnail-image" style="background-image: url('{{ post.thumbnail_image.url }}')"></div>
+				</a>
+
+        
+        
+			</div> <!-- post -->
+
+
+
+
+<!--       <div class="medium-6 small-12 large-4 columns {% if forloop.last %}end{% endif %}"> -->
+
+      <!-- </div> -->
     {% endfor %}
-  </div>
-</div>
+  </div> <!-- colums -->
+</div> <!-- row -->
 {% endblock %}

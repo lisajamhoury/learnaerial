@@ -1,24 +1,5 @@
 {% extends 'blog/base_blog.html' %}
 
-{% block banner %}
-<div class="row">
-<div class="large-12 columns">
-<h1>{{ post.title }}</h1>
- {% if post.author and post.publish_date %}
-    By {{ post.author.name }} | {{ post.publish_date|date:"F j, Y" }}
-  {% elif post.author %}
-    By {{ post.author.name }}
-  {% else %}
-    {{ post.publish_date|date:"F j, Y" }}
-  {% endif %}
-</div>
-</div>
-
-<div style="background-image: url('{{ post.banner_image.url }}'); background-size: cover; background-position: center center; height: 400px; width: 100%;">
-
-</div>
-{% endblock %}
-
 {% block title %}
   {% if post.page_title %}
     {{ post.page_title }}
@@ -27,28 +8,52 @@
   {% endif %}
 {% endblock %}
 
-{% block main %}
-  <a href="{% url 'blog_index' %}">Back</a><br>
-
-
-  <br>
-  <a href="{{ post.facebook_share_url }}" target="_blank">FB</a><br>
-  <a href="{{ post.twitter_share_url }}" target="_blank">Twitter</a><br>
-
-  {% if post.categories %}
-  <br>Posted in
-    {% for category in post.categories.all %}
-      <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>
-
-      {% if not forloop.last %}
-      ,
+{% block banner %}
+<div class="row blog-banner">
+  <div class="large-12 columns">
+    <h1>{{ post.title }}</h1>
+      <div class="by-line">
+     {% if post.author and post.publish_date %}
+        By {{ post.author.name }} | {{ post.publish_date|date:"F j, Y" }}
+      {% elif post.author %}
+        By {{ post.author.name }}
+      {% else %}
+        {{ post.publish_date|date:"F j, Y" }}
       {% endif %}
-    {% endfor %}
-  {% endif %}
-  <hr>
+      </div>
+  </div>
+</div>
 
+<div class="blog-banner-img" style="background-image: url('{{ post.banner_image.url }}');">
+</div>
+{% endblock %}
+
+{% block main %}
   <div class="wysiwyg">
     {{ post.body|safe }}
   </div>
+  <hr>
+  <div class="post-info">
+    <div class="post-links">
+      {% if post.categories %}
+        Posted in
+      {% for category in post.categories.all %}
+        <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+        {% if not forloop.last %}
+        ,
+        {% endif %}
+         | 
+      {% endfor %}
+      {% endif %}
+      <a href="{% url 'blog_index' %}">Back to all articles</a><br>
+    </div>
+    <div class="blog-share">
+      Share: <a href="{{ post.facebook_share_url }}" target="_blank">FB</a> | 
+      <a href="{{ post.twitter_share_url }}" target="_blank">Twitter</a><br>
+    </div>
+  </div>
+
+
+
 
 {% endblock %}

@@ -585,6 +585,73 @@ div.internal-filters {
 }
 
 
+// Blog 
+.blog-banner h1 {
+	text-transform: none;
+	font-size: 1.8rem;
+	margin-bottom: 0.3em;
+}
+
+div.by-line, div.post-info {
+	font-size: 0.9rem;
+	margin-bottom: 2em;
+}
+
+div.post-links {
+	float: left;
+}
+
+div.blog-share {
+	float: right;
+}
+
+div.blog-banner-img {
+	background-size: cover; 
+	background-position: center center; 
+	height: 600px; 
+	width: 100%;
+	margin-bottom: 3em;
+
+}
+
+.wysiwyg p {
+	font-family: $blog-font-family;
+  color: #222;
+  opacity: 0.8;
+  font-weight: 100;
+  line-height: 2em;
+  font-size: 1rem;
+}
+
+.sidebar-categories a {
+	color: $secondary-color;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.post-thumbnail-image {
+	display: block;
+	width: 100%;
+  height: 275px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 2px;
+  background-position: 50%;
+  background-color: $secondary-color;
+}
+
+.post-thumbnail {
+	padding: 5px;
+}
+
+.post-thumbnail a {
+	color: $secondary-color;
+	text-decoration: none;
+}
+
+
+
 // Media Queries
 
 //For small screens 
