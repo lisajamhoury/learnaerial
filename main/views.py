@@ -88,5 +88,3 @@ def faq(request):
 	return render(request, 'faq.html', context)
 
 
-
-

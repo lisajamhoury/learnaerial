@@ -1,11 +1,6 @@
-{% extends 'blog/base_blog.html' %}
+{% extends 'blog/index.html' %}
 
-{% block title %}{{ category.name }}{% endblock %}
+{% block title %}{{ category.name|title }}{% endblock %}
 
-{% block main %}
-  <h1>{{ category.name }}</h1>
-
-  {% for post in posts %}
-  <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
-  {% endfor %}
-{% endblock %}
+{% block category_title%}<h1>Category: {{ category.name }}</h1>{% endblock %}
+{% block return_index %}<div class="blog-return"><a href="{% url 'blog_index' %}">Back to all articles</a><br></div>{% endblock %}

@@ -594,8 +594,13 @@ div.internal-filters {
 
 div.by-line, div.post-info {
 	font-size: 0.9rem;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
+	color: $secondary-color;
 }
+
+.post-sidebar {
+	margin-bottom: 1.5em;
+}      
 
 div.post-links {
 	float: left;
@@ -623,16 +628,29 @@ div.blog-banner-img {
   font-size: 1rem;
 }
 
-.sidebar-categories a {
+.post-sidebar a {
 	color: $secondary-color;
   text-decoration: none;
   text-transform: capitalize;
 }
 
+.sidebar-relatedposts a {
+	font-size: 0.9em; 
+	line-height: 2em;   
+}
+
+h2.post-sidebar-title {
+	margin-bottom: 1em;
+}
+
+.post-sidebar a:hover {
+	text-decoration: underline;
+}
+
 .post-thumbnail-image {
 	display: block;
 	width: 100%;
-  height: 275px;
+  height: 245px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -646,16 +664,49 @@ div.blog-banner-img {
 }
 
 .post-thumbnail a {
-	color: $secondary-color;
+	/*color: $secondary-color;*/
 	text-decoration: none;
 }
 
+.post-thumbnail a:hover { 
+  text-decoration: underline;
+}
 
+.post-thumbnail h2 {
+	margin-bottom: 0;
+}
+
+.post-thumbnail h3 {
+	margin-top: 0;
+}
+
+.post-thumbnail h2 a {
+	color: #222;
+  font-weight: 400;
+  font-size: 1em;
+
+}
+
+.post-thumbnail h3 a {
+	color: $secondary-color;
+	font-weight: 100;
+	font-size: 0.8em;
+}
+
+.blog-post h2 {
+	color: $secondary-color;
+  font-size: 1.2rem;
+  margin-bottom: 1.2em;
+}
+
+.blog-return a {
+	padding-left: 5px;
+}
 
 // Media Queries
 
-//For small screens 
 
+/*For small screens */
 @media #{$small-only} {
 	#home-splash {
 		padding-top: 100px;
@@ -693,10 +744,14 @@ div.blog-banner-img {
   	div.offering {
   		margin-bottom: 0;
   	}
+
+  	div.blog-share {
+    	float: left;
+		}
 }
 
 
-//For small and media screens only
+/*For small and media screens only*/
 
 @media only screen and (max-width: 64em) { 
 	.update-prompt {
@@ -710,12 +765,31 @@ div.blog-banner-img {
 	.meta div {
 		border-right: none;
 	}
+
+	div.post-info {
+		padding-bottom: 5em;
+	}
+
+	div.blog-return {
+		margin-top: 1em;
+	}
 }
 
-// For large screens
 
-@media only screen and (min-width: 64.063em) { 
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+}
+
+
+/* For large screens*/
+
+@media screen and (min-width: 64.063em) { 
 	.update-prompt-below {
 		display: none;
+	}
+
+	.post-thumbnail {
+		height: 350px;
 	}
 }

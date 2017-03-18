@@ -10,21 +10,24 @@
 
 {% block banner %}
 <div class="row blog-banner">
-  <div class="large-12 columns">
-    <h1>{{ post.title }}</h1>
-      <div class="by-line">
+  <div class="blog-post large-12 columns">
+  <div class="by-line">
      {% if post.author and post.publish_date %}
-        By {{ post.author.name }} | {{ post.publish_date|date:"F j, Y" }}
+        {{ post.author.name }} | {{ post.publish_date|date:"F j, Y" }}
       {% elif post.author %}
-        By {{ post.author.name }}
+        {{ post.author.name }}
       {% else %}
         {{ post.publish_date|date:"F j, Y" }}
       {% endif %}
       </div>
+    <h1>{{ post.title }}</h1>
+      {%if post.subtitle %}<h2>{{ post.subtitle }}</h2>{% endif %}
+
+      
   </div>
 </div>
 
-<div class="blog-banner-img" style="background-image: url('{{ post.banner_image.url }}');">
+<div class="blog-banner-img" style="background-image: url('{{ post.banner_image_resized.url }}');">
 </div>
 {% endblock %}
 

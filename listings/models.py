@@ -98,5 +98,5 @@ class Listing(models.Model):
 		parts = urlparse(self.website)
 		return parts.netloc
 	
-	# def get_absolute_url(self):
-	# 	return reverse('listings-listing', args=[self.slug]) 
+	def get_absolute_url(self):
+		return reverse('listing', args=[self.slug])

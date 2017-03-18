@@ -22,12 +22,28 @@
       {% include "includes/newsletter-form.html" %}
 
       <hr>
-      <h2>Categories</h2>
-      <div class="sidebar-categories">
+      <h2 class="post-sidebar-title">Categories</h2>
+      <div class="post-sidebar sidebar-categories">
       {% for category in categories %}
-        <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+        <a href="{{ category.get_absolute_url }}">{{ category.name }}</a><br>
       {% endfor %}
       </div>
+      {% if post.listings.count > 0 %}
+        <h2 class="post-sidebar-title">Related Listings</h2>
+        <div class="post-sidebar sidebar-relatedlistings">
+        {% for listing in post.listings.all %}
+          <a href="{{listing.get_absolute_url }}">{{ listing.name }}</a><br>
+        {% endfor %}
+        </div>
+      {% endif %}
+      {% if post.related_posts.count > 0 %}
+        <h2 class="post-sidebar-title">Related Posts</h2>
+        <div class="post-sidebar sidebar-relatedposts">
+        {% for related_post in post.related_posts.all %}
+          <a href="{{related_post.get_absolute_url }}">{{ related_post.title }}</a><br>
+        {% endfor %}
+        </div>
+      {% endif %}
     {% endblock %}
   </div>
 </div>

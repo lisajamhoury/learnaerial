@@ -10,6 +10,7 @@ class BlogMixinView(object):
         context = super(BlogMixinView, self)\
             .get_context_data(*args, **kwargs)
         context['categories'] = Category.objects.all()
+        context['current_page'] = 'blog'
 
         return context
 

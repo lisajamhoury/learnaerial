@@ -2,10 +2,12 @@ from __future__ import unicode_literals
 from urllib import urlencode
 from autoslug import AutoSlugField
 
-
 from django.db import models
 from django.conf import settings
 from django.core.urlresolvers import reverse
+
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFit
 
 
 # Create your models here.
@@ -24,12 +26,20 @@ class Post(models.Model):
     listings = models.ManyToManyField('listings.Listing', blank=True)
     published = models.BooleanField(default=False)
     publish_date = models.DateTimeField(blank=True, null=True)
-
     thumbnail_image = models.ImageField(null=True, blank=True, upload_to='blog/thumbnails')
     banner_image = models.ImageField(null=True, blank=True, upload_to='blog/banner')
-
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
+
+    thumbnail_image_resized = ImageSpecField(source='thumbnail_image',
+                                    processors=[ResizeToFit(width=1000, upscale=False)],
+                                    format='JPEG',
+                                    options={'quality': 85})
+
+    banner_image_resized = ImageSpecField(source='banner_image',
+                                    processors=[ResizeToFit(width=1500, upscale=False)],
+                                    format='JPEG',
+                                    options={'quality': 100})
 
     class Meta:
         ordering = ['order', '-publish_date', '-created']

@@ -9,6 +9,7 @@
         <li {% if current_page == 'listings_listing' or current_page == 'listings' %} class="active" {% endif %}><a href="{% url 'listings' %}">Listings</a></li>
         <li {% if current_page == 'event_listing' or current_page == 'events' %} class="active" {% endif %}><a href="{% url 'events' %}">Events</a></li>
         <li {% if current_page == 'equipment' %} class="active" {% endif %}><a href="{% url 'equipment' %}">Equipment</a></li>
+        <li {% if current_page == 'blog' %} class="active" {% endif %}><a href="{% url 'blog_index' %}">Blog</a></li>
         <li {% if current_page == 'faq' %} class="active" {% endif %}><a href="{% url 'faq' %}">FAQ</a></li>
       </ul>
     </div>
@@ -28,6 +29,7 @@
         <li {% if current_page == 'listings_listing' or current_page == 'listings' %} class="active" {% endif %}><a href="{% url 'listings' %}">Listings</a></li>
         <li {% if current_page == 'event_listing' or current_page == 'events' %} class="active" {% endif %}><a href="{% url 'events' %}">Events</a></li>
         <li {% if current_page == 'equipment' %} class="active" {% endif %}><a href="{% url 'equipment' %}">Equipment</a></li>
+        <li {% if current_page == 'blog' %} class="active" {% endif %}><a href="{% url 'blog_index' %}">Blog</a></li>
         <li {% if current_page == 'faq' %} class="active" {% endif %}><a href="{% url 'faq' %}">FAQ</a></li>
       </ul>
     </section>
