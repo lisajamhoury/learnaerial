@@ -1,6 +1,8 @@
 {% extends 'blog/index.html' %}
 
-{% block title %}{{ category.name|title }}{% endblock %}
+{% block title %}{{ category.name|title }} — News and Stories About Aerial Arts{% endblock %}
+{% block og_title %}{{ category.name|title }} — News and Stories About Aerial Arts{% endblock %}
+
 
 {% block category_title%}<h1>Category: {{ category.name }}</h1>{% endblock %}
 {% block return_index %}<div class="blog-return"><a href="{% url 'blog_index' %}">Back to all articles</a><br></div>{% endblock %}

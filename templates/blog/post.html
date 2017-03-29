@@ -1,12 +1,10 @@
 {% extends 'blog/base_blog.html' %}
 
-{% block title %}
-  {% if post.page_title %}
-    {{ post.page_title }}
-  {% else %}
-    {{ post.name }}
-  {% endif %}
-{% endblock %}
+{% block title %}{% if post.page_title %}{{ post.page_title }}{% else %}{{ post.title }}{% endif %}{% endblock %}
+{% block og_title %}{% if post.page_title %}{{ post.page_title }}{% else %}{{ post.title }}{% endif %}{% endblock %}
+{% block og_image %}{{ base_url }}{{ post.banner_image_resized.url }}{% endblock %}
+{% block og_description %}{{ post.meta_description|truncatewords:30 }} {% endblock %}
+
 
 {% block banner %}
 <div class="row blog-banner">
