@@ -91,6 +91,9 @@ class Listing(models.Model):
 	categories = models.ManyToManyField(Category)
 	offerings = models.ManyToManyField(Offering)
 
+	class Meta:
+		ordering = ['name']
+
 	def __unicode__(self):
 		return self.name
 
