@@ -23,27 +23,6 @@ def about(request):
 
 	return render(request, 'about.html', context)
 
-def schools(request):
-
-	context = {}
-	context['current_page'] = 'schools'
-
-	return render(request, 'schools.html', context)
-
-def venues(request):
-
-	context = {}
-	context['current_page'] = 'venues'
-
-	return render(request, 'venues.html', context)
-
-def companies(request):
-
-	context = {}
-	context['current_page'] = 'companies'
-
-	return render(request, 'companies.html', context)
-
 def equipment(request):
 
 	context = {}
