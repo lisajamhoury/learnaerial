@@ -29,7 +29,7 @@ except ImportError:
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=sf$s-&@ayl2(3&rfro=ywy#0w3jvvi$e%!oh+=2@0n5x)qug='
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -151,7 +151,7 @@ if ENVIRONMENT == 'develop':
     STATIC_ROOT = BASE_DIR + '/learnaerial_static'
 
 
-MAILCHIMP_API_KEY = '3477524f7215966259c95cd4b96bb3eb-us4'
+MAILCHIMP_API_KEY = os.environ.get('MAILCHIMP_API_KEY', '')
 
 FACEBOOK_APP_ID = '377919919067435'
 FACEBOOK_APP_SECRET = '1292e06dd33d3ddc2a5e6ef32b105ee2'
