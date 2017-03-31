@@ -31,7 +31,7 @@ class PostDetailView(BlogMixinView, DetailView):
         queryset = super(PostDetailView, self).get_queryset(*args, **kwargs)
 
         if not self.request.user.is_authenticated:
-            queryset = queryset.filter(published=False)
+            queryset = queryset.filter(published=True)
 
         return queryset
 
@@ -52,6 +52,5 @@ class CategoryListView(BlogMixinView, ListView):
         self.category = get_object_or_404(Category, slug=self.kwargs['slug'])
 
         posts = Post.objects.filter(categories=self.category)
-        print posts
-        return posts
 
+        return posts
