@@ -51,6 +51,6 @@ class CategoryListView(BlogMixinView, ListView):
     def get_queryset(self, *args, **kwargs):
         self.category = get_object_or_404(Category, slug=self.kwargs['slug'])
 
-        posts = Post.objects.filter(categories=self.category)
+        posts = Post.objects.filter(categories=self.category, published=True)
 
         return posts
