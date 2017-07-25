@@ -56,10 +56,13 @@ class Event(models.Model):
 			venue_name = self.venue.name
 		return venue_name
 
-	def get_venue_url(self):
+	def get_venue_url(self, absolute=False):
 		venue_url = self.venue_url
 		if self.venue:
 			venue_url = self.venue.get_absolute_url()
+			if absolute:
+				venue_url = settings.SITE_URL + venue_url
+		
 		return venue_url
 
 	def ready_to_post(self):

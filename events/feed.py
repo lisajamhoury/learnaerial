@@ -30,7 +30,7 @@ class UpcomingEventsFeed(Feed):
         return item.get_venue_name() 
 
     def item_enclosure_url(self, item):
-        return settings.SITE_URL + item.get_venue_url()
+        return item.get_venue_url(absolute=True)
 
     def item_description(self, item):
         truncated_description = truncatewords(item.description, 50)
