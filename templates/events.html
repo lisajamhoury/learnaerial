@@ -26,7 +26,7 @@
 
 					<div class="summary-details large-10 columns">
 					<span class="summary-event-name"><a class="summary-title" href="{% url 'event-listing' event.slug %}">{{ event.name|truncatechars:75 }}</a></span>
-					<span class="summary-event-venue">{{ event.venue }}</span>
+					<span class="summary-event-venue">{{ event.get_venue_name }}</span>
 					<span class="summary-event-date"> | {{ event.start_date}}
 					{% if event.end_date %} &ndash; {{ event.end_date }} {% endif %} | <a href="{% url 'event-listing' event.slug %}">Event details</a><br>
 					</div>
@@ -50,7 +50,7 @@
 
 				<div class="summary-details large-10 columns">
 				<span class="summary-event-name"><a class="summary-title" href="{% url 'event-listing' event.slug %}">{{ event.name|truncatechars:75 }}</a></span>
-				<span class="summary-event-venue">{{ event.venue }}</span>
+				<span class="summary-event-venue">{{ event.get_venue_name }}</span>
 				<span class="summary-event-date"> | <a href="{% url 'event-listing' event.slug %}">Event details</a></span><br>
 				</div>
 			</div>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title %}{{ event.name }} at {{ event.venue }}{% endblock %}
-{% block og_title %}{{ event.name }} at {{ event.venue }}{% endblock %}
+{% block title %}{{ event.name }} at {{ event.get_venue_name }}{% endblock %}
+{% block og_title %}{{ event.name }} at {{ event.get_venue_name }}{% endblock %}
 {% block og_image %}{{ base_url }}{{ event.image.url }}{% endblock %}
 {% block og_description %}{{ event.description|truncatewords:30 }} {% endblock %}
 {% block content %}
@@ -21,7 +21,7 @@
 	<section class="event-details">
 		<div class="event-text">
 		<p>
-		{% if event.venue %}<strong>Venue:</strong> <a href="{{ event.venue_url }}" target="_blank">{{ event.venue }}</a><br>{% endif %}
+		{% if event.get_venue_name %}<strong>Venue:</strong> <a href="{{ event.get_venue_url }}" {% if not event.venue %}target="_blank" {% endif %}>{{ event.get_venue_name }}</a><br>{% endif %}
 		
 		{% if not event.ongoing %}
 			{% if event.start_date %}<strong>Date:</strong> {{ event.start_date }} 

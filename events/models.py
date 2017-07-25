@@ -9,6 +9,8 @@ from django.utils.timezone import get_default_timezone
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFit
 
+from listings.models import Listing 
+
 
 class Event(models.Model):
 	published = models.BooleanField(default=False)
@@ -16,7 +18,8 @@ class Event(models.Model):
 	image = models.ImageField(null=True, blank=True, upload_to='events')
 	name = models.CharField(max_length=500)
 	slug = models.SlugField()
-	venue = models.CharField(max_length=500)
+	venue = models.ForeignKey(Listing, null=True, blank = True)
+	venue_name = models.CharField(max_length=500, null=True, blank=True)
 	venue_url = models.CharField(max_length=500, null=True, blank=True)
 	start_date = models.DateField()
 	end_date = models.DateField(null=True, blank=True)
@@ -46,6 +49,18 @@ class Event(models.Model):
 
 	def get_full_url(self):
 		return settings.SITE_URL + self.get_absolute_url()
+
+	def get_venue_name(self):
+		venue_name = self.venue_name
+		if self.venue:
+			venue_name = self.venue.name
+		return venue_name
+
+	def get_venue_url(self):
+		venue_url = self.venue_url
+		if self.venue:
+			venue_url = self.venue.get_absolute_url()
+		return venue_url
 
 	def ready_to_post(self):
 		now = datetime.datetime.now(get_default_timezone())
