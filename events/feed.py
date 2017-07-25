@@ -3,6 +3,7 @@ import datetime
 from django.db.models import Q
 from django.contrib.syndication.views import Feed
 from django.core.urlresolvers import reverse
+from django.conf import settings
 from django.template.defaultfilters import truncatewords
 
 from events.models import Event
@@ -24,6 +25,12 @@ class UpcomingEventsFeed(Feed):
 
     def item_title(self, item):
         return item.name
+
+    def item_author_name(self, item):
+        return item.get_venue_name() 
+
+    def item_enclosure_url(self, item):
+        return settings.SITE_URL + item.get_venue_url()
 
     def item_description(self, item):
         truncated_description = truncatewords(item.description, 50)
