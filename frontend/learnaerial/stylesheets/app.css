@@ -9736,82 +9736,97 @@ h2.post-sidebar-title {
   padding-left: 5px;
 }
 
+/* line 708, ../scss/app.scss */
+.helptext {
+  font-size: 0.8rem;
+}
+
+/* line 712, ../scss/app.scss */
+.listing-form textarea {
+  margin-bottom: 0;
+}
+
+/* line 716, ../scss/app.scss */
+.listing-form input {
+  margin-bottom: 0;
+}
+
 /*For small screens */
 @media only screen and (max-width: 40em) {
-  /* line 711, ../scss/app.scss */
+  /* line 730, ../scss/app.scss */
   #home-splash {
     padding-top: 100px;
   }
-  /* line 713, ../scss/app.scss */
+  /* line 732, ../scss/app.scss */
   #home-splash p {
     font-size: 18px;
   }
 
-  /* line 718, ../scss/app.scss */
+  /* line 737, ../scss/app.scss */
   li.listing {
     width: 100%;
     margin-bottom: 35px;
   }
 
-  /* line 723, ../scss/app.scss */
+  /* line 742, ../scss/app.scss */
   .meta {
     margin-bottom: 20px;
   }
 
-  /* line 727, ../scss/app.scss */
+  /* line 746, ../scss/app.scss */
   .meta div.isa {
     border-left: none;
   }
 
-  /* line 731, ../scss/app.scss */
+  /* line 750, ../scss/app.scss */
   .meta div {
     margin-bottom: 20px;
   }
 
-  /* line 735, ../scss/app.scss */
+  /* line 754, ../scss/app.scss */
   div#listing-lightbox {
     margin: 0px 0px;
   }
 
-  /* line 739, ../scss/app.scss */
+  /* line 758, ../scss/app.scss */
   a#close-x {
     right: 2rem;
     top: 1.5rem;
   }
 
-  /* line 744, ../scss/app.scss */
+  /* line 763, ../scss/app.scss */
   div.offering {
     margin-bottom: 0;
   }
 
-  /* line 748, ../scss/app.scss */
+  /* line 767, ../scss/app.scss */
   div.blog-share {
     float: left;
   }
 }
 /*For small and media screens only*/
 @media only screen and (max-width: 64em) {
-  /* line 757, ../scss/app.scss */
+  /* line 776, ../scss/app.scss */
   .update-prompt {
     display: none;
   }
 
-  /* line 761, ../scss/app.scss */
+  /* line 780, ../scss/app.scss */
   .meta div.isa {
     border-left: none;
   }
 
-  /* line 765, ../scss/app.scss */
+  /* line 784, ../scss/app.scss */
   .meta div {
     border-right: none;
   }
 
-  /* line 769, ../scss/app.scss */
+  /* line 788, ../scss/app.scss */
   div.post-info {
     padding-bottom: 5em;
   }
 
-  /* line 773, ../scss/app.scss */
+  /* line 792, ../scss/app.scss */
   div.blog-return {
     margin-top: 1em;
   }
@@ -9819,12 +9834,12 @@ h2.post-sidebar-title {
 /* Medium only */
 /* For large screens*/
 @media screen and (min-width: 64.063em) {
-  /* line 788, ../scss/app.scss */
+  /* line 807, ../scss/app.scss */
   .update-prompt-below {
     display: none;
   }
 
-  /* line 792, ../scss/app.scss */
+  /* line 811, ../scss/app.scss */
   .post-thumbnail {
     height: 350px;
   }
