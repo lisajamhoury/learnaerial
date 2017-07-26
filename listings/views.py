@@ -147,7 +147,7 @@ def listings_sf(request):
 	return render(request, 'listings-sf.html', context)
 
 
-def listing_add(request):
+def listing_submit(request):
     if request.method == "POST":
         form = ListingForm(request.POST)
         if form.is_valid():
@@ -155,7 +155,7 @@ def listing_add(request):
             return redirect('listings_thanks')
     else:
         form = ListingForm()
-   	return render(request, 'listing-add.html', {'form': form})
+   	return render(request, 'listing-submit.html', {'form': form})
 
 def listings_thanks(request):
 	return render(request, 'listings-thanks.html')
