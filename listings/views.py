@@ -152,7 +152,10 @@ def listing_add(request):
         form = ListingForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('listings')
+            return redirect('listings_thanks')
     else:
         form = ListingForm()
    	return render(request, 'listing-add.html', {'form': form})
+
+def listings_thanks(request):
+	return render(request, 'listings-thanks.html')
