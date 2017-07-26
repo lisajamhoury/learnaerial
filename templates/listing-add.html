@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Submit An Aerial Listing{% endblock %}
+{% block og_title %}Submit An Aerial Listing{% endblock %}
+
+
+{% block content %}
+    <h1>Submit An Aerial Listing</h1>
+
+    <div class="row">
+    <div class="large-8 columns">
+        <p>Know of an aerial school, venue or company that isn't listed on Learn Aerial? Please let us know about it with the form below. We're happy to include listings from anywhere in the world.</p>
+
+        <form method="POST" class="listing-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    </div>
+  </div>
+
+{% endblock %}

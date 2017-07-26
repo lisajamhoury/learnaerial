@@ -3,7 +3,6 @@ from django.views.generic import ListView, DetailView
 
 from .models import Post, Category
 
-
 class BlogMixinView(object):
     def get_context_data(self, *args, **kwargs):
 

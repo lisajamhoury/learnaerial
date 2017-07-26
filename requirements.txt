@@ -9,3 +9,4 @@ facebook-sdk
 django-extensions
 django-autoslug
 django-summernote
+us

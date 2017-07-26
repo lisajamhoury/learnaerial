@@ -10,9 +10,11 @@ class State(models.Model):
 	name = models.CharField(max_length=200)
 	slug = AutoSlugField(max_length=50, unique=True, populate_from='name')
 
+	class Meta:
+		ordering = ('name', )
+
 	def __unicode__(self):
 		return self.name
-
 
 class Country(models.Model):
 	name = models.CharField(max_length=200)
@@ -83,13 +85,17 @@ class Listing(models.Model):
 	neighborhood = models.ForeignKey(Neighborhood, null=True, blank=True)
 	address_1 = models.CharField(max_length=500, null=True, blank=True)
 	address_2 = models.CharField(max_length=500, null=True, blank=True)
-	city = models.ForeignKey(City, null=True)
-	state = models.ForeignKey(State, null=True)
+	city = models.ForeignKey(City, null=True, blank=True)
+	freeform_city = models.CharField(max_length=500, null=True, blank=True)
+	state = models.ForeignKey(State, null=True, blank=True)
 	zipcode = models.CharField(max_length=15, null=True, blank=True)
 	country = models.ForeignKey(Country, null=True)
+	freeform_country = models.CharField(max_length=500, null=True, blank=True)
 	description = models.TextField(null=True, blank=True)
 	categories = models.ManyToManyField(Category)
 	offerings = models.ManyToManyField(Offering)
+	contact_employee = models.BooleanField(default=False)
+	contact_email = models.CharField(max_length=500, null=True, blank=True)
 
 	class Meta:
 		ordering = ['name']

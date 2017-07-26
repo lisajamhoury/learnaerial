@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
@@ -8,6 +9,7 @@ from listings.models import Offering
 from listings.models import City 
 from listings.models import State
 from listings.models import MetroArea
+from listings.forms import ListingForm
 
 def listings(request):
 	listings = Listing.objects\
@@ -143,3 +145,14 @@ def listings_sf(request):
 	context['current_page'] = 'listings'
 
 	return render(request, 'listings-sf.html', context)
+
+
+def listing_add(request):
+    if request.method == "POST":
+        form = ListingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('listings')
+    else:
+        form = ListingForm()
+   	return render(request, 'listing-add.html', {'form': form})
