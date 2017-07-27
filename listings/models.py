@@ -8,6 +8,7 @@ from django_extensions.db.fields import AutoSlugField
 
 class State(models.Model):
 	name = models.CharField(max_length=200)
+	code = models.CharField(max_length=5, blank=True)
 	slug = AutoSlugField(max_length=50, unique=True, populate_from='name')
 
 	class Meta:
