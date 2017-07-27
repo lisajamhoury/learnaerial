@@ -704,7 +704,7 @@ h2.post-sidebar-title {
 }
 
 
-// Listings Thank You Page 
+// Listings Submit and thank you
 .helptext {
 	font-size: 0.8rem;
 }
@@ -715,6 +715,17 @@ h2.post-sidebar-title {
 
 .listing-form input {
 	margin-bottom: 0;
+}
+
+ul.errorlist {
+	margin-left: 0;
+    margin-bottom: 0;
+}
+
+.errorlist li {
+	font-size: 0.8rem;
+	list-style: none;
+    color: indianred;
 }
 
     

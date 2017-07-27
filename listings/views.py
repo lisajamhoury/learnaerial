@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
@@ -12,150 +13,152 @@ from listings.models import MetroArea
 from listings.forms import ListingForm
 
 def listings(request):
-	listings = Listing.objects\
-		.filter(published=True)\
-		.order_by('name')
+    listings = Listing.objects\
+        .filter(published=True)\
+        .order_by('name')
 
-	metroareas = MetroArea.objects\
-		.all()\
-		.order_by('name')
+    metroareas = MetroArea.objects\
+        .all()\
+        .order_by('name')
 
-	categories = Category.objects\
-		.all()\
-		.order_by('name')
+    categories = Category.objects\
+        .all()\
+        .order_by('name')
 
-	offerings = Offering.objects\
-		.all()\
-		.order_by('name')
+    offerings = Offering.objects\
+        .all()\
+        .order_by('name')
 
-	cities = City.objects\
-		.all()\
-		.order_by('name')
+    cities = City.objects\
+        .all()\
+        .order_by('name')
 
-	context = {}
-	context['listings'] = listings
-	context['metroareas'] = metroareas
-	context['categories'] = categories
-	context['offerings'] = offerings
-	context['cities'] = cities
-	context['current_page'] = 'listings'
+    context = {}
+    context['listings'] = listings
+    context['metroareas'] = metroareas
+    context['categories'] = categories
+    context['offerings'] = offerings
+    context['cities'] = cities
+    context['current_page'] = 'listings'
 
-	return render(request, 'listings.html', context)
+    return render(request, 'listings.html', context)
 
 
 def listing(request, slug):
-	try:
-		listing = Listing.objects.get(slug=slug)
-	except Listing.DoesNotExist: 
-		return HttpResponseRedirect(reverse('listings'))
-	template_name = 'listings-listing.html'
+    try:
+        listing = Listing.objects.get(slug=slug)
+    except Listing.DoesNotExist: 
+        return HttpResponseRedirect(reverse('listings'))
+    template_name = 'listings-listing.html'
 
-	context = {}
-	context['listing'] = listing 
-	context['current_page'] = 'listings_listing'
+    context = {}
+    context['listing'] = listing 
+    context['current_page'] = 'listings_listing'
 
-	if request.is_ajax():
-		template_name = 'listing-modal.html'
-		context['modal'] = True
+    if request.is_ajax():
+        template_name = 'listing-modal.html'
+        context['modal'] = True
 
-	return render(request, template_name, context)
+    return render(request, template_name, context)
 
 def listings_metro_area(request, slug):
-	try:
-		metro_area = MetroArea.objects.get(slug=slug)
-	except MetroArea.DoesNotExist:
-		return HttpResponseRedirect(reverse('listings'))
-	template_name = 'listings-metro-area.html'
+    try:
+        metro_area = MetroArea.objects.get(slug=slug)
+    except MetroArea.DoesNotExist:
+        return HttpResponseRedirect(reverse('listings'))
+    template_name = 'listings-metro-area.html'
 
-	listings = Listing.objects\
-		.filter(published=True, city__metroarea=metro_area)\
-		.order_by('name')
+    listings = Listing.objects\
+        .filter(published=True, city__metroarea=metro_area)\
+        .order_by('name')
 
-	categories = Category.objects\
-		.all()\
-		.order_by('name')
+    categories = Category.objects\
+        .all()\
+        .order_by('name')
 
-	offerings = Offering.objects\
-		.all()\
-		.order_by('name')
+    offerings = Offering.objects\
+        .all()\
+        .order_by('name')
 
-	cities = City.objects\
-		.filter(metroarea=metro_area)\
-		.order_by('name')
+    cities = City.objects\
+        .filter(metroarea=metro_area)\
+        .order_by('name')
 
-	context = {}
-	context['metro_area'] = metro_area
-	context['listings'] = listings
-	context['categories'] = categories
-	context['offerings'] = offerings
-	context['cities'] = cities
-	context['current_page'] = 'listings'
+    context = {}
+    context['metro_area'] = metro_area
+    context['listings'] = listings
+    context['categories'] = categories
+    context['offerings'] = offerings
+    context['cities'] = cities
+    context['current_page'] = 'listings'
 
-	return render(request, 'listings-metro-area.html', context)	
+    return render(request, 'listings-metro-area.html', context) 
 
 
 def listings_nyc(request):
-	listings_nyc = Listing.objects\
-		.filter(published=True, state__name__icontains="ny")\
-		.order_by('name')
+    listings_nyc = Listing.objects\
+        .filter(published=True, state__name__icontains="ny")\
+        .order_by('name')
 
-	categories = Category.objects\
-		.all()\
-		.order_by('name')
+    categories = Category.objects\
+        .all()\
+        .order_by('name')
 
-	offerings = Offering.objects\
-		.all()\
-		.order_by('name')
+    offerings = Offering.objects\
+        .all()\
+        .order_by('name')
 
-	cities = City.objects\
-		.filter(state__name__icontains="ny")\
-		.order_by('name')
+    cities = City.objects\
+        .filter(state__name__icontains="ny")\
+        .order_by('name')
 
-	context = {}
-	context['listings'] = listings_nyc
-	context['categories'] = categories
-	context['offerings'] = offerings
-	context['cities'] = cities
-	context['current_page'] = 'listings'
+    context = {}
+    context['listings'] = listings_nyc
+    context['categories'] = categories
+    context['offerings'] = offerings
+    context['cities'] = cities
+    context['current_page'] = 'listings'
 
-	return render(request, 'listings-nyc.html', context)
+    return render(request, 'listings-nyc.html', context)
 
 def listings_sf(request):
-	listings_nyc = Listing.objects\
-		.filter(published=True, state__name__icontains="ca")\
-		.order_by('name')
+    listings_nyc = Listing.objects\
+        .filter(published=True, state__name__icontains="ca")\
+        .order_by('name')
 
-	categories = Category.objects\
-		.all()\
-		.order_by('name')
+    categories = Category.objects\
+        .all()\
+        .order_by('name')
 
-	offerings = Offering.objects\
-		.all()\
-		.order_by('name')
+    offerings = Offering.objects\
+        .all()\
+        .order_by('name')
 
-	cities = City.objects\
-		.filter(state__name__icontains="ca")\
-		.order_by('name')
+    cities = City.objects\
+        .filter(state__name__icontains="ca")\
+        .order_by('name')
 
-	context = {}
-	context['listings'] = listings_nyc
-	context['categories'] = categories
-	context['offerings'] = offerings
-	context['cities'] = cities
-	context['current_page'] = 'listings'
+    context = {}
+    context['listings'] = listings_nyc
+    context['categories'] = categories
+    context['offerings'] = offerings
+    context['cities'] = cities
+    context['current_page'] = 'listings'
 
-	return render(request, 'listings-sf.html', context)
+    return render(request, 'listings-sf.html', context)
 
 
 def listing_submit(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         form = ListingForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('listings_thanks')
     else:
         form = ListingForm()
-   	return render(request, 'listing-submit.html', {'form': form})
+
+    return render(request, 'listing-submit.html', {'form': form})
+
 
 def listings_thanks(request):
-	return render(request, 'listings-thanks.html')
+    return render(request, 'listings-thanks.html')

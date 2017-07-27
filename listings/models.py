@@ -85,17 +85,16 @@ class Listing(models.Model):
 	neighborhood = models.ForeignKey(Neighborhood, null=True, blank=True)
 	address_1 = models.CharField(max_length=500, null=True, blank=True)
 	address_2 = models.CharField(max_length=500, null=True, blank=True)
-	city = models.ForeignKey(City, null=True, blank=True)
-	freeform_city = models.CharField(max_length=500, null=True, blank=True)
+	city = models.ForeignKey(City, null=True, blank=True, help_text='Enter city here. This is used on the listings section of the website.')
+	freeform_city = models.CharField(max_length=500, null=True, blank=True, help_text=' Do not enter here. This is for user input from website form. Use city field instead.')
 	state = models.ForeignKey(State, null=True, blank=True)
 	zipcode = models.CharField(max_length=15, null=True, blank=True)
-	country = models.ForeignKey(Country, null=True)
-	freeform_country = models.CharField(max_length=500, null=True, blank=True)
+	country = models.ForeignKey(Country, null=True, help_text='Enter country here. This is used on the listings section of the website.')
+	freeform_country = models.CharField(max_length=500, null=True, blank=True, help_text='Do not enter here. This is for user input from website form. Use country field instead.')
 	description = models.TextField(null=True, blank=True)
 	categories = models.ManyToManyField(Category)
 	offerings = models.ManyToManyField(Offering)
-	contact_employee = models.BooleanField(default=False)
-	contact_email = models.CharField(max_length=500, null=True, blank=True)
+	contact_email = models.CharField(max_length=500, null=True, blank=True, help_text='Do not enter here. This is for user input from website form. Should not be made public.')
 
 	class Meta:
 		ordering = ['name']
