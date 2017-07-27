@@ -8,7 +8,7 @@
 		<div class="listing-address">
 			{{ listing.address_1 }} <br/>
 			{% if listing.address_2 %}{{ listing.address_2 }}<br/>{% endif %}
-			{{ listing.city }}, {{ listing.state }} {{ listing.zipcode }}<br/>
+			{{ listing.city }}, {% if listing.state %}{{ listing.state.code }}{% endif %} {{ listing.zipcode }}<br/>
 			{{ listing.neighborhood }}<br/>
 			<a href="{{ listing.website }}" target="_blank">{{ listing.short_website }}</a>
 		</div>
