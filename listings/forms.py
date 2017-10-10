@@ -7,7 +7,8 @@ class ListingForm(forms.ModelForm):
 	freeform_city = forms.CharField(required=True, label='City')
 	state = forms.ModelChoiceField(queryset=State.objects.all(), label='State (US Only)')
 	freeform_country = forms.CharField(required=True, label='Country')
-	categories = forms.ModelMultipleChoiceField(queryset=Category.objects.all())
+	categories = forms.ModelMultipleChoiceField(queryset=Category.objects.all(), help_text="To select more than one, hold down command (control on PC) while selecting")
+	offerings = forms.ModelMultipleChoiceField(queryset=Offering.objects.all(), help_text="To select more than one, hold down command (control on PC) while selecting")
 	contact_email = forms.CharField(required=False, label='Contact Email Address', help_text="Optionally enter a contact email. This will not be displayed publicly.")
 	description = forms.CharField(required=False, widget=forms.Textarea, help_text='Optionally write a short description about this listing.')
 
